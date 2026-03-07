@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --md-sys-color-primary: #006495;
+    --md-sys-color-on-primary: #ffffff;
+    --md-sys-color-primary-container: #cbe6ff;
+    --md-sys-color-on-primary-container: #001e30;
+
+    --md-sys-color-surface: #fcfcff;
+    --md-sys-color-on-surface: #1a1c1e;
+    --md-sys-color-surface-variant: #dde3ea;
+    --md-sys-color-on-surface-variant: #41474d;
+
+    --md-sys-color-background: #fcfcff;
+    --md-sys-color-on-background: #1a1c1e;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --md-sys-color-primary: #8ecaff;
+      --md-sys-color-on-primary: #003450;
+      --md-sys-color-primary-container: #004b71;
+      --md-sys-color-on-primary-container: #cbe6ff;
+
+      --md-sys-color-surface: #1a1c1e;
+      --md-sys-color-on-surface: #e2e2e5;
+      --md-sys-color-surface-variant: #41474d;
+      --md-sys-color-on-surface-variant: #c1c7ce;
+
+      --md-sys-color-background: #1a1c1e;
+      --md-sys-color-on-background: #e2e2e5;
+    }
+  }
+
+  body {
+    @apply bg-surface-light dark:bg-surface-dark text-gray-900 dark:text-gray-100 antialiased font-sans;
+  }
+}

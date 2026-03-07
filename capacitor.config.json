@@ -1,0 +1,6 @@
+{
+  "appId": "com.message.chat.wits",
+  "appName": "WITS Chat",
+  "webDir": "target/classes/META-INF/VAADIN/webapp",
+  "bundledWebRuntime": false
+}

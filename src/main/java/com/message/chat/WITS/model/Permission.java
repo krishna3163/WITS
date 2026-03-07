@@ -1,0 +1,18 @@
+package com.message.chat.WITS.model;
+
+public enum Permission {
+    SEND_MESSAGES,
+    READ_MESSAGES,
+    MANAGE_CHANNELS,
+    MANAGE_ROLES,
+    MANAGE_SERVER,
+    VOICE_CONNECT,
+    VOICE_SPEAK,
+    STAGE_SPEAK,
+    CREATE_POLLS,
+    PIN_MESSAGES,
+    KICK_MEMBERS,
+    BAN_MEMBERS,
+    MUTE_MEMBERS,
+    START_LIVE_SESSION
+}
