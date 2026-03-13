@@ -1,106 +1,119 @@
 # WITS - World Interactive Trading & Social Platform (SuperApp)
 
-WITS is a comprehensive, multi-module "SuperApp" built using Spring Boot, Vaadin, and Capacitor. It combines real-time messaging, social networking, e-commerce, digital wallets, and AI-driven features into a single, seamless ecosystem.
+[![Build Status](https://github.com/krishna3163/WITS/actions/workflows/build.yml/badge.svg)](https://github.com/krishna3163/WITS/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 🚀 Overview
+WITS is a next-generation, multi-module **SuperApp** designed to unify communication, social networking, commerce, and finance into a single ecosystem. Built with a high-performance Java/Spring Boot backend and a cross-platform Capacitor frontend, WITS provides a seamless experience across Web, Android, iOS, Windows, macOS, and Linux.
 
-WITS (World Interactive Trading & Social) is designed to be more than just a chat application. It's a platform that integrates social connectivity with financial utility and AI intelligence. Whether you're chatting with friends, managing a community server, exploring a social feed, or using integrated mini-apps, WITS provides a unified experience.
+---
 
-## ✨ Key Features
+## 🤖 AI-Agent Developer Quickstart
 
-### 💬 Communication & Community
-- **Real-time Chat**: Individual and group messaging powered by WebSockets.
-- **Servers & Channels**: Discord-style community servers with granular management and settings.
-- **Group Management**: Advanced controls for group creators and admins.
+> [!IMPORTANT]
+> **To the AI Developer:** This project uses a **Modular Monolith** architecture (Spring Modulith). Each domain (Wallet, Chat, Feed, etc.) is highly encapsulated.
+> - **Entry Point**: `src/main/java/com/message/chat/WITS/WitsApplication.java`
+> - **Core Logic**: Services in `src/main/java/com/message/chat/WITS/service/` drive the high-level features.
+> - **UI Layer**: Vaadin views in `src/main/java/com/message/chat/WITS/view/` handle the reactive web interface.
+> - **SuperApp Core**: `SuperAppService.java` is the primary orchestrator for mini-apps and transactions.
 
-### 📱 Social Ecosystem
-- **Dynamic Social Feed**: Share updates, photos, and interact with the community.
-- **Snap Map**: Discover users and events around you with location-based discovery.
-- **Profiles**: Fully customizable user profiles with social stats and activity history.
+---
 
-### 🎮 Mini-Apps & Games Hub
-- **Integrated Hub**: A dedicated space for mini-games and utility mini-apps.
-- **Sandboxed Execution**: Safe environment for running third-party or internal mini-apps.
+## ✨ Features & Behavior in Detail
 
-### 💰 Finance & Commerce
-- **Digital Wallet**: Securely manage your digital assets and transactions.
-- **Storefront**: Integrated e-commerce marketplace for physical or digital products.
+### 1. 💬 Hyper-Connected Messaging
+- **Real-Time Engine**: WebSocket-based messaging for instantaneous delivery.
+- **Discord-Style Servers**: Create and join communities with specific channels (text, media, announcements).
+- **Advanced Group Controls**: Roles, permissions, and management views for community moderators.
+- **Media Sharing**: Integrated AWS S3-backed media upload and viewing.
 
-### 🤖 AI Integration
-- **Internal AI Features**: Leverages Spring AI for intelligent chat assistance, content moderation, or discovery patterns.
+### 2. 💰 Financial SuperApp Features (`SuperAppService`)
+- **Digital Wallet**: Native wallet for every user with currency support (default: USD).
+- **P2P Payments**: Send and receive money instantly between users.
+- **QR Code Payments**: Scan-to-pay functionality using unique wallet tokens.
+- **Bill Splitting**: Create group bills, automatically calculate shares, and track payment status.
+- **Storefront**: Browse products and pay directly using your WITS wallet balance.
 
-## 🛠 Tech Stack
+### 3. 📱 Social Ecosystem
+- **Interactive Feed**: A high-fidelity social timeline with posting, liking, and commenting capabilities.
+- **Snap Map**: Geospatial discovery to find friends, local events, or popular spots.
+- **Privacy First**: Granular privacy settings for profile visibility and location sharing.
 
-### Backend
-- **Framework**: Spring Boot 3.2.4
-- **Security**: Spring Security (JWT-based)
-- **Database**: 
-  - **PostgreSQL** (Relational data, User accounts, Transactions)
-  - **MongoDB** (Chat messages, Feeds, Metadata)
-- **AI**: Spring AI (OpenAI-compatible)
-- **Real-time**: Spring WebSockets
-- **Organization**: Spring Modulith for clear architectural boundaries.
+### 4. 🎮 Mini-App Sandbox
+- **Extensible Hub**: A dedicated marketplace for mini-games and utility apps (Taxi, Shopping, etc.).
+- **Dynamic Registration**: New mini-apps can be registered and rendered instantly within the WITS container.
+- **Unified Auth**: Single sign-on for all internal mini-services.
 
-### Frontend
-- **Web Interface**: Vaadin 24.3.6 (Java-based UI components)
-- **Mobile Integration**: Capacitor 8.2.0 (for Android/iOS builds)
-- **Client Logic**: Lit, TypeScript, Vite
+---
 
-### Infrastructure
-- **Cloud Storage**: AWS S3 integration for media uploads.
-- **Containerization**: Docker & Docker Compose support.
-- **Native Support**: GraalVM Native Image readiness.
+## 🛠 Technology Stack
 
-## 📦 Project Structure
+| Layer | Technology |
+| :--- | :--- |
+| **Backend** | Spring Boot 3.2.4, Spring Security, Spring Modulith |
+| **Persistence** | PostgreSQL (Relational), MongoDB (Document/NoSQL) |
+| **AI Integration** | Spring AI (OpenAI/Cloud compatible) |
+| **Web Frontend** | Vaadin 24.3.x, Lit, TypeScript, Vite |
+| **Mobile/Desktop** | Capacitor 8.2.0, Electron, iOS Native, Android Native |
+| **Infrastructure** | Docker, AWS S3, GitHub Actions |
 
-```text
-WITS/
-├── android/             # Android Native/Capacitor project
-├── api-gateway/         # Microservices API Gateway
-├── src/main/java/       # Core Spring Boot Application
-│   ├── controller/      # REST Endpoints (AI, CRM, Wallet, etc.)
-│   ├── model/           # Data Entities
-│   ├── view/            # Vaadin Web Components & Layouts
-│   └── security/        # Auth & Security configuration
-├── frontend/            # Vaadin frontend resources
-├── docker-compose.yml   # Infrastructure setup
-└── pom.xml              # Maven dependencies
-```
+---
 
-## 🚀 Getting Started
+## 🛠 Development & Contribution
+
+WITS is designed to be **Contribution Friendly**. We welcome builders, designers, and AI agents.
 
 ### Prerequisites
-- Java 17+
-- Maven 3.8+
-- Node.js & npm (for frontend builds)
-- Docker (optional, for DB services)
+- **Java 17+** & **Maven 3.8+**
+- **Node.js 18+** & **npm**
+- **Docker** (for database services)
 
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/krishna3163/WITS.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd WITS
-   ```
-3. Run the infrastructure services (PostgreSQL, MongoDB):
-   ```bash
-   docker-compose up -d
-   ```
-4. Build and run the application:
-   ```bash
-   mvn spring-boot:run
-   ```
+### Local Setup
+1.  **Clone & Install**:
+    ```bash
+    git clone https://github.com/krishna3163/WITS.git
+    cd WITS
+    npm install
+    ```
+2.  **Start Services**:
+    ```bash
+    docker-compose up -d
+    ```
+3.  **Run Backend**:
+    ```bash
+    mvn spring-boot:run
+    ```
+4.  **Frontend (Optional manual build)**:
+    ```bash
+    cd frontend-react && npm run build
+    ```
 
-## 📱 Mobile Build (Android)
-To build the Android APK:
-1. Ensure Android Studio is installed.
-2. Run Capacitor sync:
-   ```bash
-   npx cap sync android
-   ```
-3. Open the `android` folder in Android Studio and build the APK.
+### How to Contribute
+- **Domain Experts**: Focus on specific services in `src/main/java/.../service/`.
+- **UI/UX Designers**: Contribute to Vaadin views or the React-based frontend modules.
+- **AI Agents**: When adding features, ensure you follow the existing service-repository pattern. Always update the `HELP.md` or `README.md` if you introduce new architectural concepts.
+
+---
+
+## 🏗 Build Automation (CI/CD)
+
+The project includes a **Multi-Platform Build Pipeline** via GitHub Actions.
+- **Artifacts Generated**:
+  - `Android`: .apk (Debug/Release)
+  - `Windows`: .exe (Installer)
+  - `macOS`: .dmg / .app
+  - `Linux`: .AppImage / .deb
+- **Workflow Path**: `.github/workflows/build.yml`
+
+---
 
 ## 📄 License
-This project is [UNLICENSED](LICENSE).
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🤝 Roadmap
+- [ ] Implement End-to-End Encryption (E2EE) for secret chats.
+- [ ] Expand AI discovery engine for better "Snap Map" suggestions.
+- [ ] Integrate real-time audio spaces/voice channels.
+- [ ] Full Marketplace for third-party mini-app developers.
