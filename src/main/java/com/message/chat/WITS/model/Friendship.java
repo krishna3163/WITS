@@ -1,36 +1,61 @@
 package com.message.chat.WITS.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import java.time.Instant;
+import java.util.UUID;
 
-import java.time.LocalDateTime;
-
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
-@Document(collection = "friendships")
+@Entity
+@Table(name = "friendships")
 public class Friendship {
+
     @Id
-    private String id;
-    private String userId1;
-    private String userId2;
-    private LocalDateTime establishedAt;
+    private UUID id;
 
-    // Streak logic
-    @Builder.Default
-    private int streakCount = 0;
-    private LocalDateTime lastSnapTimestamp;
+    private UUID userId;
+    private UUID contactId;
+    private String status;
+    private Instant createdAt;
 
-    // Map / Location sharing
-    private boolean shareLocation; // Global share for this friend
-    private ShareLevel shareLevel; // GHOST, FRIENDS, ONLY_THESE
+    // Getters and Setters
+    public UUID getId() {
+        return id;
+    }
 
-    public enum ShareLevel {
-        GHOST, FRIENDS, SELECTED
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public UUID getUserId() {
+        return userId;
+    }
+
+    public void setUserId(UUID userId) {
+        this.userId = userId;
+    }
+
+    public UUID getContactId() {
+        return contactId;
+    }
+
+    public void setContactId(UUID contactId) {
+        this.contactId = contactId;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public Instant getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Instant createdAt) {
+        this.createdAt = createdAt;
     }
 }

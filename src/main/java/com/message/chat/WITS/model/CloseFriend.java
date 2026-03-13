@@ -7,25 +7,16 @@ import java.time.Instant;
 import java.util.UUID;
 
 @Entity
-@Table(name = "contacts")
-public class Contact {
+@Table(name = "close_friends")
+public class CloseFriend {
 
     @Id
-    private UUID id;
-
     private UUID userId;
-    private UUID contactId;
-    private String status;
+
+    private UUID friendId;
     private Instant createdAt;
 
     // Getters and Setters
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
 
     public UUID getUserId() {
         return userId;
@@ -35,20 +26,12 @@ public class Contact {
         this.userId = userId;
     }
 
-    public UUID getContactId() {
-        return contactId;
+    public UUID getFriendId() {
+        return friendId;
     }
 
-    public void setContactId(UUID contactId) {
-        this.contactId = contactId;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
+    public void setFriendId(UUID friendId) {
+        this.friendId = friendId;
     }
 
     public Instant getCreatedAt() {

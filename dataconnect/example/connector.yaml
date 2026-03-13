@@ -1,0 +1,45 @@
+connectorId: example
+generate:
+  kotlinSdk:
+    - outputDir: ../../src/main/kotlin
+      package: com.google.firebase.dataconnect.generated
+    - outputDir: ../../api-gateway/src/main/kotlin
+      package: com.google.firebase.dataconnect.generated
+    - outputDir: ../../android/app/src/main/kotlin
+      package: com.google.firebase.dataconnect.generated
+  swiftSdk:
+    - outputDir: ../../ios/FirebaseDataConnectGenerated
+      package: DataConnectGenerated
+  javascriptSdk:
+    - outputDir: ../../src/dataconnect-generated
+      package: "@dataconnect/generated"
+      packageJsonDir: ../..
+      react: false
+      angular: false
+    - outputDir: ../../frontend-react/src/dataconnect-generated
+      package: "@dataconnect/generated"
+      packageJsonDir: ../../frontend-react
+      react: true
+      angular: false
+    - outputDir: ../../frontend-mobile/src/dataconnect-generated
+      package: "@dataconnect/generated"
+      packageJsonDir: ../../frontend-mobile
+      react: true
+      angular: false
+    - outputDir: ../../frontend-app/src/dataconnect-generated
+      package: "@dataconnect/generated"
+      packageJsonDir: ../../frontend-app
+      react: false
+      angular: false
+    - outputDir: ../../electron/src/dataconnect-generated
+      package: "@dataconnect/generated"
+      packageJsonDir: ../../electron
+      react: false
+      angular: false
+  adminNodeSdk:
+    - outputDir: ../../functions/src/dataconnect-admin-generated
+      package: "@dataconnect/admin-generated"
+      packageJsonDir: ../../functions
+    - outputDir: ../../3/src/dataconnect-admin-generated
+      package: "@dataconnect/admin-generated"
+      packageJsonDir: ../../3

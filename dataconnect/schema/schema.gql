@@ -1,0 +1,91 @@
+type User @table {
+  username: String!
+  email: String!
+  passwordHash: String!
+  displayName: String!
+  createdAt: Timestamp!
+  bio: String
+  profilePictureUrl: String
+  location: String
+  privacySettings: String
+  lastActiveAt: Timestamp
+}
+
+type Post @table {
+  author: User
+  content: String!
+  createdAt: Timestamp!
+  contentType: String!
+  mediaUrl: String
+  caption: String
+  visibility: String
+  parentPost: Post
+  community: Community
+}
+
+type Chat @table {
+  chatType: String!
+  createdAt: Timestamp!
+  name: String
+  description: String
+  profilePictureUrl: String
+  adminUser: User
+  isEphemeral: Boolean
+}
+
+type Message @table {
+  chat: Chat
+  sender: User
+  content: String!
+  createdAt: Timestamp!
+  messageType: String!
+  mediaUrl: String
+  replyToMessage: Message
+}
+
+type Community @table {
+  creator: User
+  name: String!
+  createdAt: Timestamp!
+  communityType: String!
+  description: String
+  rules: String
+  profilePictureUrl: String
+}
+
+type Relationship @table(key: ["initiator", "target", "type"]) {
+  initiator: User!
+  target: User!
+  type: String!
+  createdAt: Timestamp!
+  status: String
+}
+
+type ServiceIntegration @table {
+  user: User
+  serviceName: String!
+  createdAt: Timestamp!
+  configuration: String
+  externalReferenceId: String
+  status: String
+}
+
+type ChatParticipant @table(key: ["chat", "user"]) {
+  chat: Chat!
+  user: User!
+}
+
+type CommunityModerator @table(key: ["community", "user"]) {
+  community: Community!
+  user: User!
+}
+
+type MessageReadStatus @table(key: ["message", "user"]) {
+  message: Message!
+  user: User!
+}
+
+type CommunityMember @table(key: ["community", "user"]) {
+  community: Community!
+  user: User!
+}

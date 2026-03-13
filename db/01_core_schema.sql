@@ -105,3 +105,54 @@ CREATE TABLE IF NOT EXISTS public.user_miniapps (
     installed_at TIMESTAMPTZ DEFAULT NOW(),
     PRIMARY KEY (user_id, miniapp_id)
 );
+
+-- Additional Identity & Social Graph Tables
+
+CREATE TABLE IF NOT EXISTS public.user_settings (
+    user_id UUID PRIMARY KEY REFERENCES public.profiles(id) ON DELETE CASCADE,
+    theme VARCHAR(50) DEFAULT 'system',
+    language VARCHAR(10) DEFAULT 'en',
+    updated_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS public.user_devices (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    user_id UUID REFERENCES public.profiles(id) ON DELETE CASCADE,
+    device_type VARCHAR(50),
+    push_token TEXT UNIQUE,
+    last_login TIMESTAMPTZ DEFAULT NOW(),
+    created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS public.contact_requests (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    sender_id UUID REFERENCES public.profiles(id) ON DELETE CASCADE,
+    receiver_id UUID REFERENCES public.profiles(id) ON DELETE CASCADE,
+    status VARCHAR(50) DEFAULT 'pending',
+    created_at TIMESTAMPTZ DEFAULT NOW(),
+    UNIQUE(sender_id, receiver_id)
+);
+
+CREATE TABLE IF NOT EXISTS public.blocklist (
+    user_id UUID REFERENCES public.profiles(id) ON DELETE CASCADE,
+    blocked_user_id UUID REFERENCES public.profiles(id) ON DELETE CASCADE,
+    created_at TIMESTAMPTZ DEFAULT NOW(),
+    PRIMARY KEY (user_id, blocked_user_id)
+);
+
+CREATE TABLE IF NOT EXISTS public.close_friends (
+    user_id UUID REFERENCES public.profiles(id) ON DELETE CASCADE,
+    friend_id UUID REFERENCES public.profiles(id) ON DELETE CASCADE,
+    created_at TIMESTAMPTZ DEFAULT NOW(),
+    PRIMARY KEY (user_id, friend_id)
+);
+
+CREATE TABLE IF NOT EXISTS public.user_security (
+    user_id UUID PRIMARY KEY REFERENCES public.profiles(id) ON DELETE CASCADE,
+    two_factor_enabled BOOLEAN DEFAULT FALSE,
+    two_factor_secret TEXT,
+    recovery_codes TEXT[],
+    updated_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+ALTER TABLE public.contacts RENAME TO friendships;

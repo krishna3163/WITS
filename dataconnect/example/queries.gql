@@ -1,0 +1,48 @@
+query ListAllCommunities @auth(level: PUBLIC, insecureReason: "This operation is safe to expose to the public as it lists public community information.") {
+  communities {
+    id
+    name
+    description
+    communityType
+    profilePictureUrl
+    creator {
+      displayName
+    }
+  }
+}
+
+query GetMyPosts @auth(level: USER, insecureReason: "This operation is safe to expose to all logged in users as it fetches the current user's posts.") {
+  posts(where: {author: {id: {eq_expr: "auth.uid"}}}) {
+    id
+    content
+    caption
+    createdAt
+    community {
+      name
+    }
+  }
+}
+
+mutation CreateNewChat($name: String, $description: String, $profilePictureUrl: String, $isEphemeral: Boolean, $chatType: String!) @auth(level: USER, insecureReason: "This operation allows logged-in users to create chats, with the admin user automatically set to the creator.") {
+  chat: chat_insert(data: {
+    name: $name,
+    description: $description,
+    profilePictureUrl: $profilePictureUrl,
+    isEphemeral: $isEphemeral,
+    chatType: $chatType,
+    adminUserId_expr: "auth.uid",
+    createdAt_expr: "request.time"
+  })
+}
+
+mutation UpdateMyProfile($bio: String, $location: String, $profilePictureUrl: String, $displayName: String) @auth(level: USER, insecureReason: "This operation is safe for logged-in users to update their own profile information.") {
+  user_update(
+    key: {id_expr: "auth.uid"},
+    data: {
+      bio: $bio,
+      location: $location,
+      profilePictureUrl: $profilePictureUrl,
+      displayName: $displayName
+    }
+  )
+}

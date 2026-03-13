@@ -1,15 +1,15 @@
 import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { MessageCircle, Globe, Compass, User, SlidersHorizontal } from 'lucide-react';
+import { Home, MessageCircle, Users, Compass, Store, GalleryVertical } from 'lucide-react';
 import classNames from 'classnames';
 import { useChatStore } from '../../store/chatStore';
 
 const TABS = [
-    { path: '/chats', label: 'Chat', icon: MessageCircle },
-    { path: '/updates', label: 'Updates', icon: Globe },
-    { path: '/communities', label: 'Communities', icon: Compass },
-    { path: '/settings', label: 'Settings', icon: SlidersHorizontal },
-    { path: '/profile', label: 'Me', icon: User },
+    { path: '/app/home', label: 'Home', icon: Home },
+    { path: '/app/chat', label: 'Chats', icon: MessageCircle },
+    { path: '/app/moments', label: 'Moments', icon: GalleryVertical },
+    { path: '/app/discover', label: 'Discover', icon: Compass },
+    { path: '/app/store', label: 'Market', icon: Store },
 ];
 
 const BottomNav = () => {
@@ -47,7 +47,7 @@ const BottomNav = () => {
                             />
 
                             {/* Unread Badge - only for Chats, from real unread count */}
-                            {tab.path === '/chats' && totalUnreadCount > 0 && (
+                            {tab.path === '/app/chat' && totalUnreadCount > 0 && (
                                 <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-black min-w-[18px] h-[18px] flex items-center justify-center rounded-full border-2 border-white dark:border-black shadow-lg shadow-red-500/30">
                                     {totalUnreadCount > 99 ? '99+' : totalUnreadCount}
                                 </span>

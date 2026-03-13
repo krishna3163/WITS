@@ -1,25 +1,18 @@
 import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import {
-    Home, Search, LayoutGrid, Heart, MoreHorizontal,
-    MessageSquare, Compass, Wallet, Bot, FileText, Briefcase, SlidersHorizontal
+    Home, MessageSquare, Users, Compass, Store, SlidersHorizontal
 } from 'lucide-react';
 import { useResponsive } from '../../hooks/useResponsive';
 import classNames from 'classnames';
 
 const TABS = [
-    { path: '/', label: 'Home', icon: Home },
-    { path: '/search', label: 'Search', icon: Search },
-    { path: '/discover', label: 'Mini Apps', icon: LayoutGrid },
-    { path: '/favorites', label: 'Favorites', icon: Heart },
-    { path: '/chats', label: 'Messages', icon: MessageSquare },
-    { path: '/moments', label: 'Timeline', icon: Compass },
-    { path: '/ai', label: 'Assistant', icon: Bot },
-    { path: '/notes', label: 'Notes', icon: FileText },
-    { path: '/crm', label: 'Work', icon: Briefcase },
-    { path: '/wallet', label: 'Pay', icon: Wallet },
-    { path: '/settings', label: 'Settings', icon: SlidersHorizontal },
-    { path: '/more', label: 'Menu', icon: MoreHorizontal },
+    { path: '/app/home', label: 'Home', icon: Home },
+    { path: '/app/chat', label: 'Chats', icon: MessageSquare },
+    { path: '/app/contacts', label: 'Contacts', icon: Users },
+    { path: '/app/discover', label: 'Discover', icon: Compass },
+    { path: '/app/store', label: 'Market', icon: Store },
+    { path: '/app/settings', label: 'Settings', icon: SlidersHorizontal },
 ];
 
 const NavRail = () => {
@@ -45,8 +38,7 @@ const NavRail = () => {
             <div className="flex-1 px-3 py-4 space-y-2 overflow-y-auto no-scrollbar">
                 {TABS.map((tab) => {
                     const Icon = tab.icon;
-                    const isActive = (tab.path === '/' && location.pathname === '/') ||
-                        (tab.path !== '/' && location.pathname.startsWith(tab.path));
+                    const isActive = location.pathname.startsWith(tab.path);
 
                     return (
                         <NavLink

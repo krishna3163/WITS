@@ -1,0 +1,130 @@
+mutation CreateDemoData @transaction @auth(level: USER, insecureReason: "Seed data can be inserted by any logged-in user for demonstration purposes.") {
+  user_insertMany(data: [
+    {
+      id: "b4d0e6c5-f8a1-4d3e-8c0b-1a2b3c4d5e6f",
+      username: "alice",
+      email: "alice@example.com",
+      passwordHash: "hashed_password_alice_123",
+      displayName: "Alice Smith",
+      createdAt: "2023-01-01T10:00:00Z"
+    },
+    {
+      id: "f7e9a8d0-c3b2-4a1f-8e7d-9c8b7a6e5d4c",
+      username: "bob",
+      email: "bob@example.com",
+      passwordHash: "hashed_password_bob_456",
+      displayName: "Bob Johnson",
+      createdAt: "2023-01-01T10:05:00Z"
+    },
+    {
+      id: "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+      username: "charlie",
+      email: "charlie@example.com",
+      passwordHash: "hashed_password_charlie_789",
+      displayName: "Charlie Brown",
+      createdAt: "2023-01-01T10:10:00Z"
+    }
+  ])
+  community_insertMany(data: [
+    {
+      id: "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+      creatorId: "b4d0e6c5-f8a1-4d3e-8c0b-1a2b3c4d5e6f",
+      name: "Firebase Developers",
+      createdAt: "2023-01-02T11:00:00Z",
+      communityType: "Public",
+      description: "A community for Firebase developers."
+    },
+    {
+      id: "e6f7a8b9-c0d1-2e3f-4a5b-6c7d8e9f0a1b",
+      creatorId: "f7e9a8d0-c3b2-4a1f-8e7d-9c8b7a6e5d4c",
+      name: "Coffee Enthusiasts",
+      createdAt: "2023-01-02T11:15:00Z",
+      communityType: "Private",
+      description: "Share your love for coffee!"
+    }
+  ])
+  communityMember_insertMany(data: [
+    {
+      communityId: "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+      userId: "f7e9a8d0-c3b2-4a1f-8e7d-9c8b7a6e5d4c"
+    },
+    {
+      communityId: "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+      userId: "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
+    },
+    {
+      communityId: "e6f7a8b9-c0d1-2e3f-4a5b-6c7d8e9f0a1b",
+      userId: "b4d0e6c5-f8a1-4d3e-8c0b-1a2b3c4d5e6f"
+    },
+    {
+      communityId: "e6f7a8b9-c0d1-2e3f-4a5b-6c7d8e9f0a1b",
+      userId: "f7e9a8d0-c3b2-4a1f-8e7d-9c8b7a6e5d4c"
+    }
+  ])
+  post_insertMany(data: [
+    {
+      id: "9d8c7b6a-5f4e-3d2c-1b0a-9f8e7d6c5b4a",
+      authorId: "b4d0e6c5-f8a1-4d3e-8c0b-1a2b3c4d5e6f",
+      communityId: "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+      content: "Hello Firebase community! Excited to be here.",
+      createdAt: "2023-01-03T12:00:00Z",
+      contentType: "Text",
+      visibility: "Public"
+    },
+    {
+      id: "3c2b1a0d-9e8f-7c6b-5a4d-3e2f1c0b9a8d",
+      authorId: "f7e9a8d0-c3b2-4a1f-8e7d-9c8b7a6e5d4c",
+      communityId: "e6f7a8b9-c0d1-2e3f-4a5b-6c7d8e9f0a1b",
+      content: "Just brewed a fresh cup of Ethiopian Yirgacheffe. Pure bliss!",
+      createdAt: "2023-01-03T12:30:00Z",
+      contentType: "Text",
+      visibility: "MembersOnly"
+    }
+  ])
+  message_insertMany(data: [
+    {
+      id: "a0b1c2d3-e4f5-6a7b-8c9d-0e1f2a3b4c5d",
+      senderId: "b4d0e6c5-f8a1-4d3e-8c0b-1a2b3c4d5e6f",
+      content: "Hey Bob, how are you doing today?",
+      createdAt: "2023-01-04T09:00:00Z",
+      messageType: "Direct",
+      chatId: null
+    },
+    {
+      id: "f1e2d3c4-b5a6-7f8e-9d0c-1b2a3f4e5d6c",
+      senderId: "f7e9a8d0-c3b2-4a1f-8e7d-9c8b7a6e5d4c",
+      content: "I'm great Alice, thanks for asking! You?",
+      createdAt: "2023-01-04T09:05:00Z",
+      messageType: "Direct",
+      replyToMessageId: "a0b1c2d3-e4f5-6a7b-8c9d-0e1f2a3b4c5d",
+      chatId: null
+    }
+  ])
+  relationship_insertMany(data: [
+    {
+      initiatorId: "b4d0e6c5-f8a1-4d3e-8c0b-1a2b3c4d5e6f",
+      targetId: "f7e9a8d0-c3b2-4a1f-8e7d-9c8b7a6e5d4c",
+      type: "Friend",
+      createdAt: "2023-01-05T10:00:00Z",
+      status: "Accepted"
+    },
+    {
+      initiatorId: "b4d0e6c5-f8a1-4d3e-8c0b-1a2b3c4d5e6f",
+      targetId: "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+      type: "Follow",
+      createdAt: "2023-01-05T10:15:00Z",
+      status: "Pending"
+    }
+  ])
+  serviceIntegration_insertMany(data: [
+    {
+      id: "cba98765-4321-abcd-ef01-23456789abcd",
+      userId: "b4d0e6c5-f8a1-4d3e-8c0b-1a2b3c4d5e6f",
+      serviceName: "Google Drive",
+      createdAt: "2023-01-06T11:00:00Z",
+      configuration: "{\"syncEnabled\": true}",
+      externalReferenceId: "google-drive-user-id-alice",
+      status: "Active"
+    }
+  ])
+}
