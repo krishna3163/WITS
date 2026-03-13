@@ -22,12 +22,33 @@ public class MiniAppController {
     public ResponseEntity<MiniApp> publishMiniApp(
             @RequestParam UUID developerId,
             @RequestParam String name,
-            @RequestParam String url) {
-        return ResponseEntity.ok(miniAppService.publishMiniApp(developerId, name, url));
+            @RequestParam(required = false) String description,
+            @RequestParam(required = false) String iconUrl,
+            @RequestParam String url,
+            @RequestParam(required = false) MiniApp.AppCategory category) {
+        return ResponseEntity.ok(miniAppService.publishMiniApp(developerId, name, description, iconUrl, url, category));
     }
 
     @GetMapping
     public ResponseEntity<List<MiniApp>> listMiniApps() {
         return ResponseEntity.ok(miniAppService.listMiniApps());
+    }
+
+    @GetMapping("/category/{category}")
+    public ResponseEntity<List<MiniApp>> getMiniAppsByCategory(@PathVariable MiniApp.AppCategory category) {
+        return ResponseEntity.ok(miniAppService.getMiniAppsByCategory(category));
+    }
+
+    @GetMapping("/developer/{developerId}")
+    public ResponseEntity<List<MiniApp>> getDeveloperMiniApps(@PathVariable UUID developerId) {
+        return ResponseEntity.ok(miniAppService.getDeveloperMiniApps(developerId));
+    }
+
+    @DeleteMapping("/{appId}")
+    public ResponseEntity<Void> deleteMiniApp(
+            @PathVariable UUID appId,
+            @RequestParam UUID developerId) {
+        miniAppService.deleteMiniApp(appId, developerId);
+        return ResponseEntity.ok().build();
     }
 }

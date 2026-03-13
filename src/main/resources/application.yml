@@ -1,23 +1,27 @@
 spring:
   application:
     name: WITS
+  main:
+    allow-bean-definition-overriding: true
 
   datasource:
-    url: ${DB_URL:jdbc:postgresql://localhost:5432/wits_db}
+    url: ${DB_URL:jdbc:postgresql://3fi9ibjk.ap-southeast.database.insforge.app:5432/insforge?sslmode=require&options=-c timezone=UTC}
     username: ${DB_USER:postgres}
-    password: ${DB_PASSWORD:password}
+    password: ${DB_PASSWORD:3a0fc1ee2b2ae3c8fd01208171f75c20}
     driver-class-name: org.postgresql.Driver
+
+  data:
+    mongodb:
+      uri: mongodb://postgres:3a0fc1ee2b2ae3c8fd01208171f75c20@3fi9ibjk.ap-southeast.database.insforge.app/insforge?retryWrites=true&w=majority
 
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
 
 server:
-  port: 8081
+  port: 8082
 
 vaadin:
   launch-browser: false

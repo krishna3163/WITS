@@ -1,61 +1,95 @@
 import React from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
-import { MessageSquare, Contact, Compass, LayoutGrid, Wallet, Settings, UserCircle } from 'lucide-react';
+import { NavLink, useLocation } from 'react-router-dom';
+import {
+    Home, Search, LayoutGrid, Heart, MoreHorizontal,
+    MessageSquare, Compass, Wallet, Bot, FileText, Briefcase, SlidersHorizontal
+} from 'lucide-react';
 import { useResponsive } from '../../hooks/useResponsive';
+import classNames from 'classnames';
 
-const tabs = [
-    { path: '/chats', label: 'Chats', icon: MessageSquare },
-    { path: '/contacts', label: 'Contacts', icon: Contact },
-    { path: '/moments', label: 'Discover', icon: Compass },
+const TABS = [
+    { path: '/', label: 'Home', icon: Home },
+    { path: '/search', label: 'Search', icon: Search },
     { path: '/discover', label: 'Mini Apps', icon: LayoutGrid },
-    { path: '/wallet', label: 'Wallet', icon: Wallet },
-    { path: '/profile', label: 'Me', icon: UserCircle },
+    { path: '/favorites', label: 'Favorites', icon: Heart },
+    { path: '/chats', label: 'Messages', icon: MessageSquare },
+    { path: '/moments', label: 'Timeline', icon: Compass },
+    { path: '/ai', label: 'Assistant', icon: Bot },
+    { path: '/notes', label: 'Notes', icon: FileText },
+    { path: '/crm', label: 'Work', icon: Briefcase },
+    { path: '/wallet', label: 'Pay', icon: Wallet },
+    { path: '/settings', label: 'Settings', icon: SlidersHorizontal },
+    { path: '/more', label: 'Menu', icon: MoreHorizontal },
 ];
 
 const NavRail = () => {
     const { isExpanded } = useResponsive();
+    const location = useLocation();
 
-    // On large desktop, it becomes a permanent drawer
-    const widthClass = isExpanded ? 'w-[240px]' : 'w-[80px]';
+    // Width classes
+    const containerClass = isExpanded ? 'w-64' : 'w-20';
 
     return (
-        <nav className={`h-full ${widthClass} bg-surface-light dark:bg-surface-dark border-r border-gray-200 dark:border-gray-800 flex flex-col items-center py-6 z-50 transition-all duration-300`}>
-            <div className="w-12 h-12 bg-primary-light rounded-2xl flex items-center justify-center mb-8 shadow-sm">
-                <span className="text-white font-bold text-lg">W</span>
+        <nav className={classNames(
+            "h-full flex flex-col bg-white dark:bg-[#121212] border-r border-gray-200 dark:border-gray-800 transition-all duration-500 z-50",
+            containerClass
+        )}>
+            {/* Logo */}
+            <div className="h-20 flex items-center justify-center">
+                <div className="w-12 h-12 bg-gradient-to-tr from-primary-light to-blue-600 rounded-[18px] flex items-center justify-center text-white shadow-xl shadow-primary-light/30">
+                    <span className="font-black text-2xl tracking-tighter">W</span>
+                </div>
             </div>
 
-            <div className="flex-1 w-full flex flex-col gap-2 items-center">
-                {tabs.map((tab) => {
+            {/* Menu Items */}
+            <div className="flex-1 px-3 py-4 space-y-2 overflow-y-auto no-scrollbar">
+                {TABS.map((tab) => {
                     const Icon = tab.icon;
+                    const isActive = (tab.path === '/' && location.pathname === '/') ||
+                        (tab.path !== '/' && location.pathname.startsWith(tab.path));
+
                     return (
                         <NavLink
                             key={tab.path}
                             to={tab.path}
-                            className={({ isActive }) =>
-                                `flex items-center rounded-2xl transition-all duration-200 group
-                 ${isExpanded ? 'w-[200px] h-[56px] px-4 justify-start' : 'w-14 h-[56px] justify-center flex-col'}
-                 ${isActive
-                                    ? 'bg-primary-container-light dark:bg-primary-container-dark text-on-primary-container-light dark:text-primary-dark font-medium'
-                                    : 'text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800'}`
-                            }
+                            className={classNames(
+                                "flex items-center gap-4 p-3 rounded-[20px] transition-all duration-300 group relative",
+                                isActive
+                                    ? "bg-primary-light text-white shadow-lg shadow-primary-light/20"
+                                    : "text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800"
+                            )}
                         >
-                            {({ isActive }) => (
-                                <>
-                                    <Icon size={isExpanded ? 24 : 26} strokeWidth={isActive ? 2.5 : 2} />
-                                    {isExpanded && <span className="ml-4 text-[14px]">{tab.label}</span>}
-                                    {!isExpanded && <span className="text-[11px] mt-1 hidden">{tab.label}</span>}
-                                </>
+                            <div className={classNames(
+                                "transition-transform group-active:scale-90",
+                                !isExpanded && "w-full flex justify-center"
+                            )}>
+                                <Icon size={24} strokeWidth={isActive ? 2.5 : 2} />
+                            </div>
+
+                            {isExpanded && (
+                                <span className="font-bold text-sm tracking-tight">{tab.label}</span>
+                            )}
+
+                            {/* Tooltip for collapsed rail */}
+                            {!isExpanded && (
+                                <div className="absolute left-20 bg-gray-900 text-white px-3 py-2 rounded-xl text-[10px] font-bold opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all whitespace-nowrap z-50">
+                                    {tab.label}
+                                </div>
                             )}
                         </NavLink>
                     );
                 })}
             </div>
 
-            {/* Footer Area / Settings */}
-            <div className="mt-auto w-full flex items-center justify-center pb-4">
-                <button className="w-12 h-12 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 hover:scale-105 transition-transform">
-                    <Settings size={22} />
-                </button>
+            {/* Footer / App Version */}
+            <div className="p-6 border-t border-gray-100 dark:border-gray-800">
+                <div className={classNames(
+                    "flex flex-col gap-1 transition-opacity",
+                    isExpanded ? "opacity-100" : "opacity-0"
+                )}>
+                    <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Version Alpha</span>
+                    <span className="text-[10px] text-gray-400">© 2026 WITS Platform</span>
+                </div>
             </div>
         </nav>
     );

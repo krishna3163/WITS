@@ -4,38 +4,110 @@
 
 @layer base {
   :root {
-    --md-sys-color-primary: #006495;
-    --md-sys-color-on-primary: #ffffff;
-    --md-sys-color-primary-container: #cbe6ff;
-    --md-sys-color-on-primary-container: #001e30;
+    --primary: 221 83% 53%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221 83% 53%;
+    --radius: 0.75rem;
 
-    --md-sys-color-surface: #fcfcff;
-    --md-sys-color-on-surface: #1a1c1e;
-    --md-sys-color-surface-variant: #dde3ea;
-    --md-sys-color-on-surface-variant: #41474d;
-
-    --md-sys-color-background: #fcfcff;
-    --md-sys-color-on-background: #1a1c1e;
+    /* Premium Vibrancy */
+    --vibrant-violet: 262 83% 58%;
+    --vibrant-indigo: 239 84% 67%;
+    --vibrant-pink: 330 81% 60%;
   }
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --md-sys-color-primary: #8ecaff;
-      --md-sys-color-on-primary: #003450;
-      --md-sys-color-primary-container: #004b71;
-      --md-sys-color-on-primary-container: #cbe6ff;
-
-      --md-sys-color-surface: #1a1c1e;
-      --md-sys-color-on-surface: #e2e2e5;
-      --md-sys-color-surface-variant: #41474d;
-      --md-sys-color-on-surface-variant: #c1c7ce;
-
-      --md-sys-color-background: #1a1c1e;
-      --md-sys-color-on-background: #e2e2e5;
-    }
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
   }
 
   body {
-    @apply bg-surface-light dark:bg-surface-dark text-gray-900 dark:text-gray-100 antialiased font-sans;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    @apply antialiased font-sans selection:bg-primary-light/20 transition-colors duration-300;
   }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 dark:bg-black/40 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-xl;
+  }
+
+  .glass-card {
+    @apply glass rounded-2xl p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl cursor-pointer;
+  }
+
+  .premium-gradient {
+    @apply bg-gradient-to-br from-[hsl(var(--vibrant-violet))] via-[hsl(var(--vibrant-indigo))] to-[hsl(var(--vibrant-pink))];
+  }
+
+  .nav-blur {
+    @apply sticky top-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-lg border-b border-white/10;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* WITS Settings-driven theme (applied by SettingsThemeApply) */
+.bg-wits-primary { background-color: var(--wits-primary, hsl(var(--primary))); }
+.text-wits-primary { color: var(--wits-primary, hsl(var(--primary))); }
+.border-wits-primary { border-color: var(--wits-primary, hsl(var(--primary))); }
+.glow-primary {
+  box-shadow: 0 0 20px -5px hsl(var(--primary) / 0.5);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #60A5FA, #A855F7, #EC4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

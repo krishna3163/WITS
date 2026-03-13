@@ -10,4 +10,6 @@ import java.util.UUID;
 @Repository
 public interface PostRepository extends JpaRepository<Post, UUID> {
     List<Post> findByUserIdOrderByCreatedAtDesc(UUID userId);
+
+    List<Post> findByGroupIdOrderByCreatedAtDesc(UUID groupId);
 }

@@ -17,7 +17,7 @@ import { Client } from '@stomp/stompjs';
 import axios from 'axios';
 
 const API_BASE_URL = 'http://localhost:8080';
-const WS_URL = 'http://localhost:8081/ws-chat';
+const WS_URL = 'http://localhost:8082/ws-chat';
 
 export default function ConversationScreen({ route, navigation }: any) {
   const { conversationId, chatName } = route.params || { conversationId: 'default', chatName: 'Chat' };

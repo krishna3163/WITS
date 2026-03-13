@@ -12,4 +12,10 @@ public interface MessageRepository extends JpaRepository<Message, UUID> {
     List<Message> findByConversationIdOrderByCreatedAtAsc(UUID conversationId);
     List<Message> findByChannelIdOrderByCreatedAtAsc(String channelId);
     List<Message> findByContentContainingIgnoreCase(String content);
+
+    // For scheduled messages
+    List<Message> findByStatusAndScheduledAtBefore(Message.MessageStatus status, java.time.LocalDateTime scheduledAt);
+
+    // For expiring snaps
+    List<Message> findByIsSnapTrueAndExpiryTimeBefore(java.time.LocalDateTime expiryTime);
 }

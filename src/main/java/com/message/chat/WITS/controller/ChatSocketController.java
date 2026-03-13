@@ -9,6 +9,9 @@ class ChatMessageRequest {
     private UUID conversationId;
     private UUID senderId;
     private String content;
+    private com.message.chat.WITS.model.Message.MessageType messageType;
+    private boolean isSnap;
+    private Integer expirySeconds;
 
     public UUID getConversationId() {
         return conversationId;
@@ -33,6 +36,30 @@ class ChatMessageRequest {
     public void setContent(String content) {
         this.content = content;
     }
+
+    public com.message.chat.WITS.model.Message.MessageType getMessageType() {
+        return messageType;
+    }
+
+    public void setMessageType(com.message.chat.WITS.model.Message.MessageType messageType) {
+        this.messageType = messageType;
+    }
+
+    public boolean isSnap() {
+        return isSnap;
+    }
+
+    public void setSnap(boolean snap) {
+        isSnap = snap;
+    }
+
+    public Integer getExpirySeconds() {
+        return expirySeconds;
+    }
+
+    public void setExpirySeconds(Integer expirySeconds) {
+        this.expirySeconds = expirySeconds;
+    }
 }
 
 @Controller
@@ -49,6 +76,9 @@ public class ChatSocketController {
         messageService.sendMessage(
                 request.getConversationId(),
                 request.getSenderId(),
-                request.getContent());
+                request.getContent(),
+                request.getMessageType(),
+                request.isSnap(),
+                request.getExpirySeconds());
     }
 }

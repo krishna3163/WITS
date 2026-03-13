@@ -19,16 +19,39 @@ public class MiniAppService {
     }
 
     @Transactional
-    public MiniApp publishMiniApp(UUID developerId, String name, String url) {
+    public MiniApp publishMiniApp(UUID developerId, String name, String description, String iconUrl, String url, MiniApp.AppCategory category) {
 
         MiniApp app = new MiniApp();
         app.setId(UUID.randomUUID());
         app.setDeveloperId(developerId);
         app.setName(name);
+        app.setDescription(description);
+        app.setIconUrl(iconUrl);
         app.setAppUrl(url);
+        app.setCategory(category != null ? category : MiniApp.AppCategory.OTHER);
         app.setCreatedAt(Instant.now());
 
         return miniAppRepository.save(app);
+    }
+
+    public List<MiniApp> getMiniAppsByCategory(MiniApp.AppCategory category) {
+        return miniAppRepository.findByCategory(category);
+    }
+
+    public List<MiniApp> getDeveloperMiniApps(UUID developerId) {
+        return miniAppRepository.findByDeveloperId(developerId);
+    }
+
+    @Transactional
+    public void deleteMiniApp(UUID appId, UUID developerId) {
+        MiniApp app = miniAppRepository.findById(appId)
+                .orElseThrow(() -> new RuntimeException("App not found"));
+
+        if (!app.getDeveloperId().equals(developerId)) {
+            throw new RuntimeException("Only the developer can delete this app");
+        }
+
+        miniAppRepository.delete(app);
     }
 
     public List<MiniApp> listMiniApps() {

@@ -1,0 +1,860 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.message.chat:WITS >------------------------
+[INFO] Building WITS 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ WITS ---
+[INFO] Copying 3 resources from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ WITS ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- vaadin:24.3.6:build-frontend (build-frontend) @ WITS ---
+[INFO] Reflections took 4421 ms to scan 194 urls, producing 11452 keys and 59720 values
+[INFO] Scanning classes to find frontend configurations and dependencies...
+[INFO] Visited 1979 classes. Took 3018 ms.
+[INFO] Checking if a production mode bundle build is needed
+[INFO] A production mode bundle build is not needed
+[INFO] Copying frontend resources from jar files ...
+[INFO] Visited 193 resources. Took 295 ms.
+[INFO] Reflections took 2879 ms to scan 194 urls, producing 11452 keys and 59720 values
+[INFO] Scanning classes to find frontend configurations and dependencies...
+[INFO] Visited 1979 classes. Took 2260 ms.
+[WARNING] Couldn't update devMode token due to missing token file.
+[INFO] Build frontend completed in 14518 ms.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ WITS ---
+[INFO] Copying 1 resource from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ WITS ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ WITS ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.message.chat.WITS.WitsApplicationTests
+22:02:57.262 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.message.chat.WITS.WitsApplicationTests]: WitsApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:02:57.536 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.message.chat.WITS.WitsApplication for test class com.message.chat.WITS.WitsApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.4)
+
+2026-03-07T22:02:58.737+05:30  INFO 8852 --- [WITS] [           main] c.m.chat.WITS.WitsApplicationTests       : Starting WitsApplicationTests using Java 17.0.12 with PID 8852 (started by Administrator in C:\Users\Administrator\Downloads\WITS)
+2026-03-07T22:02:58.738+05:30  INFO 8852 --- [WITS] [           main] c.m.chat.WITS.WitsApplicationTests       : The following 1 profile is active: "test"
+2026-03-07T22:03:01.090+05:30  INFO 8852 --- [WITS] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-07T22:03:01.093+05:30  INFO 8852 --- [WITS] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-07T22:03:01.238+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.BroadcastChannelRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2026-03-07T22:03:01.242+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.BugReportRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2026-03-07T22:03:01.244+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.CallRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2026-03-07T22:03:01.247+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.ChannelRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2026-03-07T22:03:01.249+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.ChatGroupRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2026-03-07T22:03:01.252+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.CommunityRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2026-03-07T22:03:01.267+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.EventRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2026-03-07T22:03:01.270+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.FriendRequestRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2026-03-07T22:03:01.274+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.FriendshipRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2026-03-07T22:03:01.276+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.GroupActionRequestRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2026-03-07T22:03:01.287+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.MomentRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2026-03-07T22:03:01.293+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.OfficialAccountRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2026-03-07T22:03:01.298+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.OfflineMessageQueueRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2026-03-07T22:03:01.301+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.PollRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2026-03-07T22:03:01.328+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.ReminderRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2026-03-07T22:03:01.330+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.ServerRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2026-03-07T22:03:01.333+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.ServerRoleRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2026-03-07T22:03:01.336+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.SplitBillRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2026-03-07T22:03:01.341+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.StoryRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2026-03-07T22:03:01.349+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.TrendingTopicRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2026-03-07T22:03:01.353+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.TweetRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2026-03-07T22:03:01.356+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.UserRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2026-03-07T22:03:01.360+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.WebRTCSessionRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2026-03-07T22:03:01.489+05:30  INFO 8852 --- [WITS] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 387 ms. Found 12 JPA repository interfaces.
+2026-03-07T22:03:01.679+05:30  INFO 8852 --- [WITS] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-07T22:03:01.680+05:30  INFO 8852 --- [WITS] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-03-07T22:03:01.707+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.AudioSpaceRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2026-03-07T22:03:01.711+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.ContactRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2026-03-07T22:03:01.716+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.ConversationParticipantRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2026-03-07T22:03:01.717+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.ConversationRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2026-03-07T22:03:01.720+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.MessageRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2026-03-07T22:03:01.722+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.MiniAppRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2026-03-07T22:03:01.724+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.NotificationRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2026-03-07T22:03:01.725+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.PostCommentRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2026-03-07T22:03:01.726+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.PostRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2026-03-07T22:03:01.727+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.ProfileRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2026-03-07T22:03:01.730+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.TransactionRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2026-03-07T22:03:01.732+05:30  INFO 8852 --- [WITS] [           main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.message.chat.WITS.repository.WalletRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2026-03-07T22:03:01.859+05:30  INFO 8852 --- [WITS] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 178 ms. Found 23 MongoDB repository interfaces.
+2026-03-07T22:03:03.130+05:30  WARN 8852 --- [WITS] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'de.flapdoodle.embed.mongo.spring.autoconfigure.EmbeddedMongoAutoConfiguration' of type [de.flapdoodle.embed.mongo.spring.autoconfigure.EmbeddedMongoAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [fixTransactionAndAuth] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-07T22:03:03.150+05:30  WARN 8852 --- [WITS] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'de.flapdoodle.mongodb.embedded-de.flapdoodle.embed.mongo.spring.autoconfigure.EmbeddedMongoProperties' of type [de.flapdoodle.embed.mongo.spring.autoconfigure.EmbeddedMongoProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [fixTransactionAndAuth]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-07T22:03:03.192+05:30  WARN 8852 --- [WITS] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'net' of type [de.flapdoodle.embed.mongo.config.ImmutableNet] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [fixTransactionAndAuth]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-07T22:03:03.205+05:30  WARN 8852 --- [WITS] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.data.mongodb-org.springframework.boot.autoconfigure.mongo.MongoProperties' of type [org.springframework.boot.autoconfigure.mongo.MongoProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [fixTransactionAndAuth]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-07T22:03:03.597+05:30  INFO 8852 --- [WITS] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-07T22:03:03.732+05:30  INFO 8852 --- [WITS] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-07T22:03:03.787+05:30  INFO 8852 --- [WITS] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-07T22:03:04.577+05:30  INFO 8852 --- [WITS] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-07T22:03:04.620+05:30  INFO 8852 --- [WITS] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-07T22:03:04.983+05:30  INFO 8852 --- [WITS] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-07T22:03:04.986+05:30  INFO 8852 --- [WITS] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-07T22:03:05.032+05:30  WARN 8852 --- [WITS] [           main] org.hibernate.dialect.Dialect            : HHH000511: The 2.2.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2026-03-07T22:03:05.049+05:30  WARN 8852 --- [WITS] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-07T22:03:07.213+05:30  INFO 8852 --- [WITS] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: alter table if exists audio_space_listeners drop constraint if exists FKftoosr0kdnewn1t87el5cx0fl
+Hibernate: alter table if exists audio_space_speakers drop constraint if exists FK3exna32piaxycvf9muc8847cq
+Hibernate: alter table if exists post_liker_ids drop constraint if exists FK119qw6hjdn5waoxayyjl0l8ag
+Hibernate: alter table if exists post_media_urls drop constraint if exists FK5at7kq4on2x0x29rcr1eui50f
+Hibernate: drop table if exists audio_space_listeners cascade
+Hibernate: drop table if exists audio_space_speakers cascade
+Hibernate: drop table if exists audio_spaces cascade
+Hibernate: drop table if exists contacts cascade
+Hibernate: drop table if exists conversation_participants cascade
+Hibernate: drop table if exists conversations cascade
+Hibernate: drop table if exists messages cascade
+Hibernate: drop table if exists miniapps cascade
+Hibernate: drop table if exists notifications cascade
+Hibernate: drop table if exists post_comments cascade
+Hibernate: drop table if exists post_liker_ids cascade
+Hibernate: drop table if exists post_media_urls cascade
+Hibernate: drop table if exists posts cascade
+Hibernate: drop table if exists profiles cascade
+Hibernate: drop table if exists transactions cascade
+Hibernate: drop table if exists wallets cascade
+Hibernate: create table audio_space_listeners (audio_space_id uuid not null, user_id uuid)
+Hibernate: create table audio_space_speakers (audio_space_id uuid not null, user_id uuid)
+Hibernate: create table audio_spaces (is_live boolean not null, ended_at timestamp(6) with time zone, started_at timestamp(6) with time zone, host_id uuid not null, id uuid not null, channel_id varchar(255), description varchar(255), title varchar(255) not null, primary key (id))
+Hibernate: create table contacts (created_at timestamp(6) with time zone, contact_id uuid, id uuid not null, user_id uuid, status varchar(255), primary key (id))
+Hibernate: create table conversation_participants (joined_at timestamp(6) with time zone, conversation_id uuid, id uuid not null, user_id uuid, role varchar(255), primary key (id))
+Hibernate: create table conversations (is_group boolean, created_at timestamp(6) with time zone, id uuid not null, avatar_url varchar(255), name varchar(255), primary key (id))
+Hibernate: create table messages (is_snap boolean not null, message_type smallint check (message_type between 0 and 6), screenshot_detected boolean not null, status smallint check (status between 0 and 3), created_at timestamp(6) with time zone, expiry_time timestamp(6), scheduled_at timestamp(6), timestamp timestamp(6), conversation_id uuid, id uuid not null, sender_id uuid, channel_id varchar(255), content varchar(255), media_url varchar(255), server_id varchar(255), primary key (id))
+Hibernate: create table miniapps (category smallint check (category between 0 and 6), created_at timestamp(6) with time zone, developer_id uuid, id uuid not null, app_url varchar(255), description varchar(255), icon_url varchar(255), name varchar(255), primary key (id))
+Hibernate: create table notifications (is_read boolean, type smallint check (type between 0 and 6), created_at timestamp(6) with time zone, id uuid not null, reference_id uuid, user_id uuid, content varchar(255), title varchar(255), primary key (id))
+Hibernate: create table post_comments (created_at timestamp(6) with time zone, id uuid not null, post_id uuid, user_id uuid, content varchar(255), primary key (id))
+Hibernate: create table post_liker_ids (liker_ids uuid, post_id uuid not null)
+Hibernate: create table post_media_urls (post_id uuid not null, media_urls varchar(255))
+Hibernate: create table posts (author_type smallint check (author_type between 0 and 2), type smallint check (type between 0 and 3), created_at timestamp(6) with time zone, timestamp timestamp(6), id uuid not null, user_id uuid, author_id varchar(255), content varchar(255), primary key (id))
+Hibernate: create table profiles (created_at timestamp(6) with time zone, updated_at timestamp(6) with time zone, id uuid not null, avatar_url varchar(255), bio varchar(255), email varchar(255), username varchar(255), primary key (id))
+Hibernate: create table transactions (amount float(53) not null, status smallint check (status between 0 and 2), type smallint check (type between 0 and 5), created_at timestamp(6) with time zone, timestamp timestamp(6), id uuid not null, currency varchar(255), description varchar(255), receiver_id varchar(255), sender_id varchar(255), primary key (id))
+Hibernate: create table wallets (balance numeric(38,2), created_at timestamp(6) with time zone, id uuid not null, currency varchar(255), qr_code_token varchar(255), user_id varchar(255), primary key (id))
+Hibernate: alter table if exists audio_space_listeners add constraint FKftoosr0kdnewn1t87el5cx0fl foreign key (audio_space_id) references audio_spaces
+Hibernate: alter table if exists audio_space_speakers add constraint FK3exna32piaxycvf9muc8847cq foreign key (audio_space_id) references audio_spaces
+Hibernate: alter table if exists post_liker_ids add constraint FK119qw6hjdn5waoxayyjl0l8ag foreign key (post_id) references posts
+Hibernate: alter table if exists post_media_urls add constraint FK5at7kq4on2x0x29rcr1eui50f foreign key (post_id) references posts
+2026-03-07T22:03:07.340+05:30  INFO 8852 --- [WITS] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-07T22:03:07.580+05:30  INFO 8852 --- [WITS] [           main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "4.11.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/17.0.12+8-LTS-286"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@3ddc5a75, com.mongodb.Jep395RecordCodecProvider@3b2114ce, com.mongodb.KotlinCodecProvider@6bab8290]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2026-03-07T22:03:07.797+05:30  INFO 8852 --- [WITS] [localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.lambda$open$0(SocketStream.java:84) ~[mongodb-driver-core-4.11.1.jar:na]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:84) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:211) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:196) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:156) ~[mongodb-driver-core-4.11.1.jar:na]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:76) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:104) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:78) ~[mongodb-driver-core-4.11.1.jar:na]
+	... 4 common frames omitted
+
+2026-03-07T22:03:12.555+05:30  WARN 8852 --- [WITS] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-07T22:03:13.332+05:30  INFO 8852 --- [WITS] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7ef9c234, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@580581b4, org.springframework.security.web.context.SecurityContextHolderFilter@7fa9e773, org.springframework.security.web.header.HeaderWriterFilter@3943c449, org.springframework.web.filter.CorsFilter@33c9910e, org.springframework.security.web.csrf.CsrfFilter@e2bdc58, org.springframework.security.web.authentication.logout.LogoutFilter@7c8c2d03, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6951e062, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7af45006, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4be7661, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@40ea5cd3, org.springframework.security.web.access.ExceptionTranslationFilter@6fbfd6ed, org.springframework.security.web.access.intercept.AuthorizationFilter@52072c45]
+2026-03-07T22:03:14.066+05:30  INFO 8852 --- [WITS] [           main] d.f.e.m.s.a.SyncClientServerFactory      : sync server factory
+2026-03-07T22:03:15.651+05:30  INFO 8852 --- [WITS] [           main] d.f.e.m.s.autoconfigure.EmbeddedMongo    : download https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-5.0.5.zip : starting...
+2026-03-07T22:03:15.670+05:30  INFO 8852 --- [WITS] [           main] d.f.e.m.s.autoconfigure.EmbeddedMongo    : download https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-5.0.5.zip : 0 %
+2026-03-07T22:03:31.836+05:30  INFO 8852 --- [WITS] [           main] d.f.e.m.s.autoconfigure.EmbeddedMongo    : download https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-5.0.5.zip : 10 %
+2026-03-07T22:03:46.675+05:30  INFO 8852 --- [WITS] [           main] d.f.e.m.s.autoconfigure.EmbeddedMongo    : download https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-5.0.5.zip : 20 %
+2026-03-07T22:04:01.481+05:30  INFO 8852 --- [WITS] [           main] d.f.e.m.s.autoconfigure.EmbeddedMongo    : download https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-5.0.5.zip : 30 %
+2026-03-07T22:04:16.639+05:30  INFO 8852 --- [WITS] [           main] d.f.e.m.s.autoconfigure.EmbeddedMongo    : download https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-5.0.5.zip : 40 %
+2026-03-07T22:04:33.140+05:30  INFO 8852 --- [WITS] [           main] d.f.e.m.s.autoconfigure.EmbeddedMongo    : download https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-5.0.5.zip : 50 %
+2026-03-07T22:04:50.188+05:30  INFO 8852 --- [WITS] [           main] d.f.e.m.s.autoconfigure.EmbeddedMongo    : download https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-5.0.5.zip : 60 %
+2026-03-07T22:05:09.574+05:30  INFO 8852 --- [WITS] [           main] d.f.e.m.s.autoconfigure.EmbeddedMongo    : download https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-5.0.5.zip : 70 %
+2026-03-07T22:05:29.379+05:30  INFO 8852 --- [WITS] [           main] d.f.e.m.s.autoconfigure.EmbeddedMongo    : download https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-5.0.5.zip : 80 %
+2026-03-07T22:05:45.702+05:30  INFO 8852 --- [WITS] [           main] d.f.e.m.s.autoconfigure.EmbeddedMongo    : download https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-5.0.5.zip : 90 %
+2026-03-07T22:06:02.052+05:30  INFO 8852 --- [WITS] [           main] d.f.e.m.s.autoconfigure.EmbeddedMongo    : download https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-5.0.5.zip : finished
+2026-03-07T22:06:07.796+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:07.792+05:30"},"s":"I",  "c":"NETWORK",  "id":4915701, "ctx":"-","msg":"Initialized wire specification","attr":{"spec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":13},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":13},"outgoing":{"minWireVersion":0,"maxWireVersion":13},"isInternalClient":true}}}
+2026-03-07T22:06:07.797+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:07.797+05:30"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"-","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+2026-03-07T22:06:07.926+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:07.926+05:30"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"main","msg":"No TransportLayer configured during NetworkInterface startup"}
+2026-03-07T22:06:07.928+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:07.928+05:30"},"s":"I",  "c":"NETWORK",  "id":4648602, "ctx":"main","msg":"Implicit TCP FastOpen in use."}
+2026-03-07T22:06:07.951+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:07.951+05:30"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"main","msg":"No TransportLayer configured during NetworkInterface startup"}
+2026-03-07T22:06:07.952+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:07.953+05:30"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationDonorService","ns":"config.tenantMigrationDonors"}}
+2026-03-07T22:06:07.953+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:07.953+05:30"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationRecipientService","ns":"config.tenantMigrationRecipients"}}
+2026-03-07T22:06:07.954+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:07.954+05:30"},"s":"I",  "c":"CONTROL",  "id":5945603, "ctx":"main","msg":"Multi threading initialized"}
+2026-03-07T22:06:07.954+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:07.955+05:30"},"s":"I",  "c":"CONTROL",  "id":4615611, "ctx":"initandlisten","msg":"MongoDB starting","attr":{"pid":2220,"port":53301,"dbPath":"C:/Users/ADMINI~1/AppData/Local/Temp/temp--fb1c733d-14d4-4470-98f1-d4b698261133/mongod-database7931895147746584634","architecture":"64-bit","host":"KernelOS-PC"}}
+2026-03-07T22:06:07.955+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:07.955+05:30"},"s":"I",  "c":"CONTROL",  "id":23398,   "ctx":"initandlisten","msg":"Target operating system minimum version","attr":{"targetMinOS":"Windows 7/Windows Server 2008 R2"}}
+2026-03-07T22:06:07.955+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:07.955+05:30"},"s":"I",  "c":"CONTROL",  "id":23403,   "ctx":"initandlisten","msg":"Build Info","attr":{"buildInfo":{"version":"5.0.5","gitVersion":"d65fd89df3fc039b5c55933c0f71d647a54510ae","modules":[],"allocator":"tcmalloc","environment":{"distmod":"windows","distarch":"x86_64","target_arch":"x86_64"}}}}
+2026-03-07T22:06:07.956+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:07.955+05:30"},"s":"I",  "c":"CONTROL",  "id":51765,   "ctx":"initandlisten","msg":"Operating System","attr":{"os":{"name":"Microsoft Windows 10","version":"10.0 (build 19045)"}}}
+2026-03-07T22:06:07.956+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:07.955+05:30"},"s":"I",  "c":"CONTROL",  "id":21951,   "ctx":"initandlisten","msg":"Options set by command line","attr":{"options":{"net":{"bindIp":"127.0.0.1","port":53301},"security":{"authorization":"disabled"},"storage":{"dbPath":"C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\temp--fb1c733d-14d4-4470-98f1-d4b698261133\\mongod-database7931895147746584634","journal":{"enabled":false},"syncPeriodSecs":0}}}}
+2026-03-07T22:06:07.966+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:07.965+05:30"},"s":"I",  "c":"STORAGE",  "id":22315,   "ctx":"initandlisten","msg":"Opening WiredTiger","attr":{"config":"create,cache_size=3523M,session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),builtin_extension_config=(zstd=(compression_level=6)),file_manager=(close_idle_time=600,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress,compact_progress],,log=(enabled=false),"}}
+2026-03-07T22:06:08.001+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:08.000+05:30"},"s":"I",  "c":"STORAGE",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":"[1772901368:14][2220:140708620163216], txn-recover: [WT_VERB_RECOVERY_ALL] Set global recovery timestamp: (0, 0)"}}
+2026-03-07T22:06:08.003+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:08.003+05:30"},"s":"I",  "c":"STORAGE",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":"[1772901368:3014][2220:140708620163216], txn-recover: [WT_VERB_RECOVERY_ALL] Set global oldest timestamp: (0, 0)"}}
+2026-03-07T22:06:08.016+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:08.016+05:30"},"s":"I",  "c":"STORAGE",  "id":4795906, "ctx":"initandlisten","msg":"WiredTiger opened","attr":{"durationMillis":51}}
+2026-03-07T22:06:08.018+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:08.017+05:30"},"s":"I",  "c":"RECOVERY", "id":23987,   "ctx":"initandlisten","msg":"WiredTiger recoveryTimestamp","attr":{"recoveryTimestamp":{"$timestamp":{"t":0,"i":0}}}}
+2026-03-07T22:06:08.032+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:08.032+05:30"},"s":"I",  "c":"STORAGE",  "id":4366408, "ctx":"initandlisten","msg":"No table logging settings modifications are required for existing WiredTiger tables","attr":{"loggingEnabled":true}}
+2026-03-07T22:06:08.033+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:08.033+05:30"},"s":"I",  "c":"STORAGE",  "id":22262,   "ctx":"initandlisten","msg":"Timestamp monitor starting"}
+2026-03-07T22:06:08.051+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:08.051+05:30"},"s":"I",  "c":"STORAGE",  "id":20320,   "ctx":"initandlisten","msg":"createCollection","attr":{"namespace":"admin.system.version","uuidDisposition":"provided","uuid":{"uuid":{"$uuid":"ceaa0fdc-2c6b-4a99-b730-eac85f9a8748"}},"options":{"uuid":{"$uuid":"ceaa0fdc-2c6b-4a99-b730-eac85f9a8748"}}}}
+2026-03-07T22:06:08.071+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:08.071+05:30"},"s":"I",  "c":"INDEX",    "id":20345,   "ctx":"initandlisten","msg":"Index build: done building","attr":{"buildUUID":null,"namespace":"admin.system.version","index":"_id_","commitTimestamp":null}}
+2026-03-07T22:06:08.073+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:08.074+05:30"},"s":"I",  "c":"REPL",     "id":20459,   "ctx":"initandlisten","msg":"Setting featureCompatibilityVersion","attr":{"newVersion":"5.0"}}
+2026-03-07T22:06:08.074+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:08.074+05:30"},"s":"I",  "c":"NETWORK",  "id":4915702, "ctx":"initandlisten","msg":"Updated wire specification","attr":{"oldSpec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":13},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":13},"outgoing":{"minWireVersion":0,"maxWireVersion":13},"isInternalClient":true},"newSpec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":13},"incomingInternalClient":{"minWireVersion":13,"maxWireVersion":13},"outgoing":{"minWireVersion":13,"maxWireVersion":13},"isInternalClient":true}}}
+2026-03-07T22:06:08.086+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:08.086+05:30"},"s":"I",  "c":"NETWORK",  "id":4915702, "ctx":"initandlisten","msg":"Updated wire specification","attr":{"oldSpec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":13},"incomingInternalClient":{"minWireVersion":13,"maxWireVersion":13},"outgoing":{"minWireVersion":13,"maxWireVersion":13},"isInternalClient":true},"newSpec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":13},"incomingInternalClient":{"minWireVersion":13,"maxWireVersion":13},"outgoing":{"minWireVersion":13,"maxWireVersion":13},"isInternalClient":true}}}
+2026-03-07T22:06:08.087+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:08.087+05:30"},"s":"I",  "c":"STORAGE",  "id":5071100, "ctx":"initandlisten","msg":"Clearing temp directory"}
+2026-03-07T22:06:08.088+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:08.088+05:30"},"s":"I",  "c":"CONTROL",  "id":20536,   "ctx":"initandlisten","msg":"Flow Control is enabled on this deployment"}
+2026-03-07T22:06:08.412+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:08.411+05:30"},"s":"I",  "c":"FTDC",     "id":20625,   "ctx":"initandlisten","msg":"Initializing full-time diagnostic data capture","attr":{"dataDirectory":"C:/Users/ADMINI~1/AppData/Local/Temp/temp--fb1c733d-14d4-4470-98f1-d4b698261133/mongod-database7931895147746584634/diagnostic.data"}}
+2026-03-07T22:06:08.412+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:08.412+05:30"},"s":"I",  "c":"STORAGE",  "id":20320,   "ctx":"initandlisten","msg":"createCollection","attr":{"namespace":"local.startup_log","uuidDisposition":"generated","uuid":{"uuid":{"$uuid":"f5cbba65-37c5-42c3-96fe-4b226c9aa4bc"}},"options":{"capped":true,"size":10485760}}}
+2026-03-07T22:06:08.428+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:08.428+05:30"},"s":"I",  "c":"INDEX",    "id":20345,   "ctx":"initandlisten","msg":"Index build: done building","attr":{"buildUUID":null,"namespace":"local.startup_log","index":"_id_","commitTimestamp":null}}
+2026-03-07T22:06:08.429+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:08.429+05:30"},"s":"I",  "c":"REPL",     "id":6015317, "ctx":"initandlisten","msg":"Setting new configuration state","attr":{"newState":"ConfigReplicationDisabled","oldState":"ConfigPreStart"}}
+2026-03-07T22:06:08.432+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:08.431+05:30"},"s":"I",  "c":"NETWORK",  "id":23015,   "ctx":"listener","msg":"Listening on","attr":{"address":"127.0.0.1"}}
+2026-03-07T22:06:08.432+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:08.432+05:30"},"s":"I",  "c":"NETWORK",  "id":23016,   "ctx":"listener","msg":"Waiting for connections","attr":{"port":53301,"ssl":"off"}}
+2026-03-07T22:06:08.478+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:08.478+05:30"},"s":"I",  "c":"STORAGE",  "id":20320,   "ctx":"LogicalSessionCacheRefresh","msg":"createCollection","attr":{"namespace":"config.system.sessions","uuidDisposition":"generated","uuid":{"uuid":{"$uuid":"15a7276f-3e51-4f2e-8bdf-289a33b15947"}},"options":{}}}
+2026-03-07T22:06:08.566+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:08.567+05:30"},"s":"I",  "c":"INDEX",    "id":20345,   "ctx":"LogicalSessionCacheRefresh","msg":"Index build: done building","attr":{"buildUUID":null,"namespace":"config.system.sessions","index":"_id_","commitTimestamp":null}}
+2026-03-07T22:06:08.567+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:08.567+05:30"},"s":"I",  "c":"INDEX",    "id":20345,   "ctx":"LogicalSessionCacheRefresh","msg":"Index build: done building","attr":{"buildUUID":null,"namespace":"config.system.sessions","index":"lsidTTLIndex","commitTimestamp":null}}
+2026-03-07T22:06:08.612+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:08.613+05:30"},"s":"I",  "c":"COMMAND",  "id":51803,   "ctx":"LogicalSessionCacheReap","msg":"Slow query","attr":{"type":"command","ns":"config.system.sessions","command":{"listIndexes":"system.sessions","cursor":{},"$db":"config"},"numYields":0,"ok":0,"errMsg":"ns does not exist: config.system.sessions","errName":"NamespaceNotFound","errCode":26,"reslen":134,"locks":{"Global":{"acquireCount":{"r":1}},"Mutex":{"acquireCount":{"r":1}}},"protocol":"op_msg","durationMillis":177}}
+2026-03-07T22:06:08.615+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:08.615+05:30"},"s":"I",  "c":"CONTROL",  "id":20712,   "ctx":"LogicalSessionCacheReap","msg":"Sessions collection is not set up; waiting until next sessions reap interval","attr":{"error":"NamespaceNotFound: config.system.sessions does not exist"}}
+2026-03-07T22:06:08.821+05:30  INFO 8852 --- [WITS] [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2026-03-07T22:06:08.822+05:30  INFO 8852 --- [WITS] [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@77d695f2]]
+2026-03-07T22:06:08.822+05:30  INFO 8852 --- [WITS] [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2026-03-07T22:06:08.836+05:30  INFO 8852 --- [WITS] [           main] c.m.chat.WITS.WitsApplicationTests       : Started WitsApplicationTests in 190.951 seconds (process running for 193.137)
+2026-03-07T22:06:09.065+05:30  INFO 8852 --- [WITS] [           main] org.mongodb.driver.cluster               : No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: no further information}}]}. Waiting for 30000 ms before timing out
+Hibernate: select m1_0.id,m1_0.channel_id,m1_0.content,m1_0.conversation_id,m1_0.created_at,m1_0.expiry_time,m1_0.is_snap,m1_0.media_url,m1_0.message_type,m1_0.scheduled_at,m1_0.screenshot_detected,m1_0.sender_id,m1_0.server_id,m1_0.status,m1_0.timestamp from messages m1_0
+Hibernate: select m1_0.id,m1_0.channel_id,m1_0.content,m1_0.conversation_id,m1_0.created_at,m1_0.expiry_time,m1_0.is_snap,m1_0.media_url,m1_0.message_type,m1_0.scheduled_at,m1_0.screenshot_detected,m1_0.sender_id,m1_0.server_id,m1_0.status,m1_0.timestamp from messages m1_0
+2026-03-07T22:06:09.286+05:30  INFO 8852 --- [WITS] [MessageBroker-2] org.mongodb.driver.cluster               : No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: no further information}}]}. Waiting for 30000 ms before timing out
+2026-03-07T22:06:39.081+05:30  INFO 8852 --- [WITS] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-07T22:06:39.106+05:30 ERROR 8852 --- [WITS] [           main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: no further information}}]
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:88) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:2997) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:603) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at org.springframework.data.mongodb.core.MongoTemplate.doExactCount(MongoTemplate.java:1225) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at org.springframework.data.mongodb.core.MongoTemplate.doCount(MongoTemplate.java:1194) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at org.springframework.data.mongodb.core.MongoTemplate.count(MongoTemplate.java:1183) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at org.springframework.data.mongodb.core.MongoTemplate.count(MongoTemplate.java:1164) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.count(SimpleMongoRepository.java:160) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.data.mongodb.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:158) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:220) ~[spring-aop-6.1.5.jar:6.1.5]
+	at jdk.proxy2/jdk.proxy2.$Proxy130.count(Unknown Source) ~[na:na]
+	at com.message.chat.WITS.config.DataInitializer.run(DataInitializer.java:32) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83) ~[spring-core-6.1.5.jar:6.1.5]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.1.5.jar:6.1.5]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88) ~[spring-core-6.1.5.jar:6.1.5]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774) ~[spring-boot-3.2.4.jar:3.2.4]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[na:na]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:341) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.2.4.jar:3.2.4]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.1.5.jar:6.1.5]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.1.5.jar:6.1.5]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1454) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553) ~[spring-boot-test-3.2.4.jar:3.2.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.2.4.jar:3.2.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.2.4.jar:3.2.4]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.1.5.jar:6.1.5]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.1.5.jar:6.1.5]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.1.5.jar:6.1.5]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191) ~[spring-test-6.1.5.jar:6.1.5]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130) ~[spring-test-6.1.5.jar:6.1.5]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.1.5.jar:6.1.5]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163) ~[spring-test-6.1.5.jar:6.1.5]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.1.2.jar:3.1.2]
+Caused by: com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: no further information}}]
+	at com.mongodb.internal.connection.BaseCluster.createTimeoutException(BaseCluster.java:380) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.connection.BaseCluster.selectServer(BaseCluster.java:125) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.connection.SingleServerCluster.selectServer(SingleServerCluster.java:46) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.binding.ClusterBinding.getReadConnectionSource(ClusterBinding.java:116) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionBinding.getConnectionSource(ClientSessionBinding.java:128) ~[mongodb-driver-sync-4.11.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionBinding.getReadConnectionSource(ClientSessionBinding.java:92) ~[mongodb-driver-sync-4.11.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:144) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSourceAndConnection(SyncOperationHelper.java:125) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$executeRetryableRead$4(SyncOperationHelper.java:189) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$decorateReadWithRetries$12(SyncOperationHelper.java:292) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:67) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.executeRetryableRead(SyncOperationHelper.java:194) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.executeRetryableRead(SyncOperationHelper.java:176) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.operation.AggregateOperationImpl.execute(AggregateOperationImpl.java:193) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.operation.AggregateOperation.execute(AggregateOperation.java:153) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.operation.CountDocumentsOperation.execute(CountDocumentsOperation.java:134) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.operation.CountDocumentsOperation.execute(CountDocumentsOperation.java:41) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:153) ~[mongodb-driver-sync-4.11.1.jar:na]
+	at com.mongodb.client.internal.MongoCollectionImpl.executeCount(MongoCollectionImpl.java:227) ~[mongodb-driver-sync-4.11.1.jar:na]
+	at com.mongodb.client.internal.MongoCollectionImpl.countDocuments(MongoCollectionImpl.java:197) ~[mongodb-driver-sync-4.11.1.jar:na]
+	at org.springframework.data.mongodb.core.MongoTemplate.lambda$doExactCount$15(MongoTemplate.java:1226) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:601) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	... 128 common frames omitted
+
+2026-03-07T22:06:39.119+05:30  INFO 8852 --- [WITS] [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2026-03-07T22:06:39.119+05:30  INFO 8852 --- [WITS] [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@77d695f2]]
+2026-03-07T22:06:39.119+05:30  INFO 8852 --- [WITS] [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2026-03-07T22:06:39.317+05:30 ERROR 8852 --- [WITS] [MessageBroker-2] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: no further information}}]
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:88) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:2997) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindMultiInternal(MongoTemplate.java:2922) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:2621) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at org.springframework.data.mongodb.core.ExecutableFindOperationSupport$ExecutableFindSupport.doFind(ExecutableFindOperationSupport.java:177) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at org.springframework.data.mongodb.core.ExecutableFindOperationSupport$ExecutableFindSupport.all(ExecutableFindOperationSupport.java:135) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at org.springframework.data.mongodb.repository.query.AbstractMongoQuery.lambda$getExecution$3(AbstractMongoQuery.java:189) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at org.springframework.data.mongodb.repository.query.AbstractMongoQuery.doExecute(AbstractMongoQuery.java:147) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at org.springframework.data.mongodb.repository.query.AbstractMongoQuery.execute(AbstractMongoQuery.java:119) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.data.mongodb.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:129) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:220) ~[spring-aop-6.1.5.jar:6.1.5]
+	at jdk.proxy2/jdk.proxy2.$Proxy170.findByExpiryTimeBefore(Unknown Source) ~[na:na]
+	at com.message.chat.WITS.service.SnapService.cleanupExpiredContent(SnapService.java:113) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.5.jar:6.1.5]
+	at io.micrometer.observation.Observation.observe(Observation.java:499) ~[micrometer-observation-1.12.4.jar:1.12.4]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.1.5.jar:6.1.5]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: no further information}}]
+	at com.mongodb.internal.connection.BaseCluster.createTimeoutException(BaseCluster.java:380) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.connection.BaseCluster.selectServer(BaseCluster.java:125) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.connection.SingleServerCluster.selectServer(SingleServerCluster.java:46) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.binding.ClusterBinding.getReadConnectionSource(ClusterBinding.java:116) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionBinding.getConnectionSource(ClientSessionBinding.java:128) ~[mongodb-driver-sync-4.11.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionBinding.getReadConnectionSource(ClientSessionBinding.java:92) ~[mongodb-driver-sync-4.11.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:144) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSourceAndConnection(SyncOperationHelper.java:125) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.operation.FindOperation.lambda$execute$2(FindOperation.java:322) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$decorateReadWithRetries$12(SyncOperationHelper.java:292) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:67) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.operation.FindOperation.execute(FindOperation.java:333) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.operation.FindOperation.execute(FindOperation.java:73) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:153) ~[mongodb-driver-sync-4.11.1.jar:na]
+	at com.mongodb.client.internal.MongoIterableImpl.execute(MongoIterableImpl.java:130) ~[mongodb-driver-sync-4.11.1.jar:na]
+	at com.mongodb.client.internal.MongoIterableImpl.iterator(MongoIterableImpl.java:90) ~[mongodb-driver-sync-4.11.1.jar:na]
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindMultiInternal(MongoTemplate.java:2909) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	... 35 common frames omitted
+
+2026-03-07T22:06:39.325+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.324+05:30"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"127.0.0.1:53508","uuid":"fedd2fb1-ce95-4f41-b1e1-d41e206c30d0","connectionId":1,"connectionCount":1}}
+2026-03-07T22:06:39.332+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.332+05:30"},"s":"I",  "c":"COMMAND",  "id":4695400, "ctx":"conn1","msg":"Terminating via shutdown command","attr":{"force":true,"timeoutSecs":0}}
+2026-03-07T22:06:39.333+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.333+05:30"},"s":"I",  "c":"REPL",     "id":4794602, "ctx":"conn1","msg":"Attempting to enter quiesce mode"}
+2026-03-07T22:06:39.334+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.334+05:30"},"s":"I",  "c":"COMMAND",  "id":4784901, "ctx":"conn1","msg":"Shutting down the MirrorMaestro"}
+2026-03-07T22:06:39.334+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.334+05:30"},"s":"I",  "c":"SHARDING", "id":4784902, "ctx":"conn1","msg":"Shutting down the WaitForMajorityService"}
+2026-03-07T22:06:39.335+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.335+05:30"},"s":"I",  "c":"CONTROL",  "id":4784903, "ctx":"conn1","msg":"Shutting down the LogicalSessionCache"}
+2026-03-07T22:06:39.336+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.336+05:30"},"s":"I",  "c":"NETWORK",  "id":20562,   "ctx":"conn1","msg":"Shutdown: going to close listening sockets"}
+2026-03-07T22:06:39.336+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.337+05:30"},"s":"I",  "c":"NETWORK",  "id":4784905, "ctx":"conn1","msg":"Shutting down the global connection pool"}
+2026-03-07T22:06:39.336+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.337+05:30"},"s":"I",  "c":"CONTROL",  "id":4784906, "ctx":"conn1","msg":"Shutting down the FlowControlTicketholder"}
+2026-03-07T22:06:39.336+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.337+05:30"},"s":"I",  "c":"-",        "id":20520,   "ctx":"conn1","msg":"Stopping further Flow Control ticket acquisitions."}
+2026-03-07T22:06:39.336+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.337+05:30"},"s":"I",  "c":"CONTROL",  "id":4784908, "ctx":"conn1","msg":"Shutting down the PeriodicThreadToAbortExpiredTransactions"}
+2026-03-07T22:06:39.337+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.338+05:30"},"s":"I",  "c":"REPL",     "id":4784909, "ctx":"conn1","msg":"Shutting down the ReplicationCoordinator"}
+2026-03-07T22:06:39.337+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.338+05:30"},"s":"I",  "c":"SHARDING", "id":4784910, "ctx":"conn1","msg":"Shutting down the ShardingInitializationMongoD"}
+2026-03-07T22:06:39.338+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.339+05:30"},"s":"I",  "c":"REPL",     "id":4784911, "ctx":"conn1","msg":"Enqueuing the ReplicationStateTransitionLock for shutdown"}
+2026-03-07T22:06:39.338+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.339+05:30"},"s":"I",  "c":"-",        "id":4784912, "ctx":"conn1","msg":"Killing all operations for shutdown"}
+2026-03-07T22:06:39.338+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.339+05:30"},"s":"I",  "c":"-",        "id":4695300, "ctx":"conn1","msg":"Interrupted all currently running operations","attr":{"opsKilled":2}}
+2026-03-07T22:06:39.338+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.339+05:30"},"s":"I",  "c":"TENANT_M", "id":5093807, "ctx":"conn1","msg":"Shutting down all TenantMigrationAccessBlockers on global shutdown"}
+2026-03-07T22:06:39.338+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.339+05:30"},"s":"I",  "c":"COMMAND",  "id":4784913, "ctx":"conn1","msg":"Shutting down all open transactions"}
+2026-03-07T22:06:39.339+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.340+05:30"},"s":"I",  "c":"REPL",     "id":4784914, "ctx":"conn1","msg":"Acquiring the ReplicationStateTransitionLock for shutdown"}
+2026-03-07T22:06:39.340+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.341+05:30"},"s":"I",  "c":"INDEX",    "id":4784915, "ctx":"conn1","msg":"Shutting down the IndexBuildsCoordinator"}
+2026-03-07T22:06:39.343+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.343+05:30"},"s":"I",  "c":"REPL",     "id":4784916, "ctx":"conn1","msg":"Reacquiring the ReplicationStateTransitionLock for shutdown"}
+2026-03-07T22:06:39.344+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.344+05:30"},"s":"I",  "c":"REPL",     "id":4784917, "ctx":"conn1","msg":"Attempting to mark clean shutdown"}
+2026-03-07T22:06:39.344+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.345+05:30"},"s":"I",  "c":"NETWORK",  "id":4784918, "ctx":"conn1","msg":"Shutting down the ReplicaSetMonitor"}
+2026-03-07T22:06:39.350+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.350+05:30"},"s":"I",  "c":"SHARDING", "id":4784921, "ctx":"conn1","msg":"Shutting down the MigrationUtilExecutor"}
+2026-03-07T22:06:39.351+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.351+05:30"},"s":"I",  "c":"ASIO",     "id":22582,   "ctx":"MigrationUtil-TaskExecutor","msg":"Killing all outstanding egress activity."}
+2026-03-07T22:06:39.352+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.352+05:30"},"s":"I",  "c":"COMMAND",  "id":4784923, "ctx":"conn1","msg":"Shutting down the ServiceEntryPoint"}
+2026-03-07T22:06:39.352+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.352+05:30"},"s":"I",  "c":"CONTROL",  "id":4784925, "ctx":"conn1","msg":"Shutting down free monitoring"}
+2026-03-07T22:06:39.352+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.353+05:30"},"s":"I",  "c":"CONTROL",  "id":20609,   "ctx":"conn1","msg":"Shutting down free monitoring"}
+2026-03-07T22:06:39.353+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.353+05:30"},"s":"I",  "c":"CONTROL",  "id":4784927, "ctx":"conn1","msg":"Shutting down the HealthLog"}
+2026-03-07T22:06:39.353+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.353+05:30"},"s":"I",  "c":"CONTROL",  "id":4784928, "ctx":"conn1","msg":"Shutting down the TTL monitor"}
+2026-03-07T22:06:39.353+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.353+05:30"},"s":"I",  "c":"INDEX",    "id":3684100, "ctx":"conn1","msg":"Shutting down TTL collection monitor thread"}
+2026-03-07T22:06:39.353+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.353+05:30"},"s":"I",  "c":"INDEX",    "id":3684101, "ctx":"conn1","msg":"Finished shutting down TTL collection monitor thread"}
+2026-03-07T22:06:39.353+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.354+05:30"},"s":"I",  "c":"CONTROL",  "id":4784929, "ctx":"conn1","msg":"Acquiring the global lock for shutdown"}
+2026-03-07T22:06:39.353+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.354+05:30"},"s":"I",  "c":"CONTROL",  "id":4784930, "ctx":"conn1","msg":"Shutting down the storage engine"}
+2026-03-07T22:06:39.354+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.354+05:30"},"s":"I",  "c":"STORAGE",  "id":22320,   "ctx":"conn1","msg":"Shutting down journal flusher thread"}
+2026-03-07T22:06:39.367+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.367+05:30"},"s":"I",  "c":"STORAGE",  "id":22430,   "ctx":"JournalFlusher","msg":"WiredTiger message","attr":{"message":"[1772901399:367246][2220:140708620163216], WT_SESSION.checkpoint: [WT_VERB_CHECKPOINT_PROGRESS] saving checkpoint snapshot min: 34, snapshot max: 34 snapshot count: 0, oldest timestamp: (0, 0) , meta checkpoint timestamp: (0, 0) base write gen: 1"}}
+2026-03-07T22:06:39.375+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.376+05:30"},"s":"I",  "c":"STORAGE",  "id":22321,   "ctx":"conn1","msg":"Finished shutting down journal flusher thread"}
+2026-03-07T22:06:39.377+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.378+05:30"},"s":"I",  "c":"STORAGE",  "id":22322,   "ctx":"conn1","msg":"Shutting down checkpoint thread"}
+2026-03-07T22:06:39.379+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.379+05:30"},"s":"I",  "c":"STORAGE",  "id":22323,   "ctx":"conn1","msg":"Finished shutting down checkpoint thread"}
+2026-03-07T22:06:39.379+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.379+05:30"},"s":"I",  "c":"STORAGE",  "id":20282,   "ctx":"conn1","msg":"Deregistering all the collections"}
+2026-03-07T22:06:39.379+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.379+05:30"},"s":"I",  "c":"STORAGE",  "id":22261,   "ctx":"conn1","msg":"Timestamp monitor shutting down"}
+2026-03-07T22:06:39.379+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.380+05:30"},"s":"I",  "c":"STORAGE",  "id":22317,   "ctx":"conn1","msg":"WiredTigerKVEngine shutting down"}
+2026-03-07T22:06:39.379+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.380+05:30"},"s":"I",  "c":"STORAGE",  "id":22318,   "ctx":"conn1","msg":"Shutting down session sweeper thread"}
+2026-03-07T22:06:39.380+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.381+05:30"},"s":"I",  "c":"STORAGE",  "id":22319,   "ctx":"conn1","msg":"Finished shutting down session sweeper thread"}
+2026-03-07T22:06:39.380+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.381+05:30"},"s":"I",  "c":"STORAGE",  "id":4795902, "ctx":"conn1","msg":"Closing WiredTiger","attr":{"closeConfig":"leak_memory=true,"}}
+2026-03-07T22:06:39.382+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.382+05:30"},"s":"I",  "c":"STORAGE",  "id":22430,   "ctx":"conn1","msg":"WiredTiger message","attr":{"message":"[1772901399:381999][2220:140708620163216], close_ckpt: [WT_VERB_CHECKPOINT_PROGRESS] saving checkpoint snapshot min: 37, snapshot max: 37 snapshot count: 0, oldest timestamp: (0, 0) , meta checkpoint timestamp: (0, 0) base write gen: 1"}}
+2026-03-07T22:06:39.396+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.397+05:30"},"s":"I",  "c":"STORAGE",  "id":4795901, "ctx":"conn1","msg":"WiredTiger closed","attr":{"durationMillis":16}}
+2026-03-07T22:06:39.396+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.397+05:30"},"s":"I",  "c":"STORAGE",  "id":22281,   "ctx":"conn1","msg":"shutdown: removing fs lock..."}
+2026-03-07T22:06:39.397+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.397+05:30"},"s":"I",  "c":"-",        "id":4784931, "ctx":"conn1","msg":"Dropping the scope cache for shutdown"}
+2026-03-07T22:06:39.397+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.398+05:30"},"s":"I",  "c":"FTDC",     "id":4784926, "ctx":"conn1","msg":"Shutting down full-time data capture"}
+2026-03-07T22:06:39.398+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.398+05:30"},"s":"I",  "c":"FTDC",     "id":20626,   "ctx":"conn1","msg":"Shutting down full-time diagnostic data capture"}
+2026-03-07T22:06:39.400+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.401+05:30"},"s":"I",  "c":"CONTROL",  "id":20565,   "ctx":"conn1","msg":"Now exiting"}
+2026-03-07T22:06:39.401+05:30  INFO 8852 --- [WITS] [       Thread-2] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {"t":{"$date":"2026-03-07T22:06:39.401+05:30"},"s":"I",  "c":"CONTROL",  "id":23138,   "ctx":"conn1","msg":"Shutting down","attr":{"exitCode":0}}
+2026-03-07T22:06:39.526+05:30  INFO 8852 --- [WITS] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+Hibernate: alter table if exists audio_space_listeners drop constraint if exists FKftoosr0kdnewn1t87el5cx0fl
+Hibernate: alter table if exists audio_space_speakers drop constraint if exists FK3exna32piaxycvf9muc8847cq
+Hibernate: alter table if exists post_liker_ids drop constraint if exists FK119qw6hjdn5waoxayyjl0l8ag
+Hibernate: alter table if exists post_media_urls drop constraint if exists FK5at7kq4on2x0x29rcr1eui50f
+Hibernate: drop table if exists audio_space_listeners cascade
+Hibernate: drop table if exists audio_space_speakers cascade
+Hibernate: drop table if exists audio_spaces cascade
+Hibernate: drop table if exists contacts cascade
+Hibernate: drop table if exists conversation_participants cascade
+Hibernate: drop table if exists conversations cascade
+Hibernate: drop table if exists messages cascade
+Hibernate: drop table if exists miniapps cascade
+Hibernate: drop table if exists notifications cascade
+Hibernate: drop table if exists post_comments cascade
+Hibernate: drop table if exists post_liker_ids cascade
+Hibernate: drop table if exists post_media_urls cascade
+Hibernate: drop table if exists posts cascade
+Hibernate: drop table if exists profiles cascade
+Hibernate: drop table if exists transactions cascade
+Hibernate: drop table if exists wallets cascade
+2026-03-07T22:06:39.569+05:30  INFO 8852 --- [WITS] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-07T22:06:39.577+05:30  INFO 8852 --- [WITS] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+
+
+============================
+CONDITIONS EVALUATION REPORT
+============================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2026-03-07T22:06:39.589+05:30  WARN 8852 --- [WITS] [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [com.message.chat.WITS.WitsApplicationTests@6a7b523b]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@662b17b3 testClass = com.message.chat.WITS.WitsApplicationTests, locations = [], classes = [com.message.chat.WITS.WitsApplication], contextInitializerClasses = [], activeProfiles = ["test"], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6dd7b5a3, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7bf3a5d8, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@723e88f9, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@4bf48f6, org.springframework.boot.test.context.SpringBootTestAnnotation@5c62542b], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180) ~[spring-test-6.1.5.jar:6.1.5]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.1.5.jar:6.1.5]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191) ~[spring-test-6.1.5.jar:6.1.5]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130) ~[spring-test-6.1.5.jar:6.1.5]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.1.5.jar:6.1.5]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163) ~[spring-test-6.1.5.jar:6.1.5]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.1.2.jar:3.1.2]
+Caused by: org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: no further information}}]
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:88) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:2997) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:603) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at org.springframework.data.mongodb.core.MongoTemplate.doExactCount(MongoTemplate.java:1225) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at org.springframework.data.mongodb.core.MongoTemplate.doCount(MongoTemplate.java:1194) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at org.springframework.data.mongodb.core.MongoTemplate.count(MongoTemplate.java:1183) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at org.springframework.data.mongodb.core.MongoTemplate.count(MongoTemplate.java:1164) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.count(SimpleMongoRepository.java:160) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.data.mongodb.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:158) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:220) ~[spring-aop-6.1.5.jar:6.1.5]
+	at jdk.proxy2/jdk.proxy2.$Proxy130.count(Unknown Source) ~[na:na]
+	at com.message.chat.WITS.config.DataInitializer.run(DataInitializer.java:32) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83) ~[spring-core-6.1.5.jar:6.1.5]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.1.5.jar:6.1.5]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88) ~[spring-core-6.1.5.jar:6.1.5]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774) ~[spring-boot-3.2.4.jar:3.2.4]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[na:na]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:341) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.2.4.jar:3.2.4]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.1.5.jar:6.1.5]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.1.5.jar:6.1.5]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1454) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553) ~[spring-boot-test-3.2.4.jar:3.2.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.2.4.jar:3.2.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.2.4.jar:3.2.4]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.1.5.jar:6.1.5]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.1.5.jar:6.1.5]
+	... 73 common frames omitted
+Caused by: com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: no further information}}]
+	at com.mongodb.internal.connection.BaseCluster.createTimeoutException(BaseCluster.java:380) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.connection.BaseCluster.selectServer(BaseCluster.java:125) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.connection.SingleServerCluster.selectServer(SingleServerCluster.java:46) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.binding.ClusterBinding.getReadConnectionSource(ClusterBinding.java:116) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionBinding.getConnectionSource(ClientSessionBinding.java:128) ~[mongodb-driver-sync-4.11.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionBinding.getReadConnectionSource(ClientSessionBinding.java:92) ~[mongodb-driver-sync-4.11.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:144) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSourceAndConnection(SyncOperationHelper.java:125) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$executeRetryableRead$4(SyncOperationHelper.java:189) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$decorateReadWithRetries$12(SyncOperationHelper.java:292) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:67) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.executeRetryableRead(SyncOperationHelper.java:194) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.executeRetryableRead(SyncOperationHelper.java:176) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.operation.AggregateOperationImpl.execute(AggregateOperationImpl.java:193) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.operation.AggregateOperation.execute(AggregateOperation.java:153) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.operation.CountDocumentsOperation.execute(CountDocumentsOperation.java:134) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.internal.operation.CountDocumentsOperation.execute(CountDocumentsOperation.java:41) ~[mongodb-driver-core-4.11.1.jar:na]
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:153) ~[mongodb-driver-sync-4.11.1.jar:na]
+	at com.mongodb.client.internal.MongoCollectionImpl.executeCount(MongoCollectionImpl.java:227) ~[mongodb-driver-sync-4.11.1.jar:na]
+	at com.mongodb.client.internal.MongoCollectionImpl.countDocuments(MongoCollectionImpl.java:197) ~[mongodb-driver-sync-4.11.1.jar:na]
+	at org.springframework.data.mongodb.core.MongoTemplate.lambda$doExactCount$15(MongoTemplate.java:1226) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:601) ~[spring-data-mongodb-4.2.4.jar:4.2.4]
+	... 128 common frames omitted
+
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 222.7 s <<< FAILURE! -- in com.message.chat.WITS.WitsApplicationTests
+[ERROR] com.message.chat.WITS.WitsApplicationTests.contextLoads -- Time elapsed: 0.026 s <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@662b17b3 testClass = com.message.chat.WITS.WitsApplicationTests, locations = [], classes = [com.message.chat.WITS.WitsApplication], contextInitializerClasses = [], activeProfiles = ["test"], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6dd7b5a3, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7bf3a5d8, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@723e88f9, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@4bf48f6, org.springframework.boot.test.context.SpringBootTestAnnotation@5c62542b], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: no further information}}]
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:88)
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:2997)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:603)
+	at org.springframework.data.mongodb.core.MongoTemplate.doExactCount(MongoTemplate.java:1225)
+	at org.springframework.data.mongodb.core.MongoTemplate.doCount(MongoTemplate.java:1194)
+	at org.springframework.data.mongodb.core.MongoTemplate.count(MongoTemplate.java:1183)
+	at org.springframework.data.mongodb.core.MongoTemplate.count(MongoTemplate.java:1164)
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.count(SimpleMongoRepository.java:160)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.mongodb.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:158)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:220)
+	at jdk.proxy2/jdk.proxy2.$Proxy130.count(Unknown Source)
+	at com.message.chat.WITS.config.DataInitializer.run(DataInitializer.java:32)
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790)
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83)
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60)
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789)
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:341)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1454)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	... 17 more
+Caused by: com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: no further information}}]
+	at com.mongodb.internal.connection.BaseCluster.createTimeoutException(BaseCluster.java:380)
+	at com.mongodb.internal.connection.BaseCluster.selectServer(BaseCluster.java:125)
+	at com.mongodb.internal.connection.SingleServerCluster.selectServer(SingleServerCluster.java:46)
+	at com.mongodb.internal.binding.ClusterBinding.getReadConnectionSource(ClusterBinding.java:116)
+	at com.mongodb.client.internal.ClientSessionBinding.getConnectionSource(ClientSessionBinding.java:128)
+	at com.mongodb.client.internal.ClientSessionBinding.getReadConnectionSource(ClientSessionBinding.java:92)
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:144)
+	at com.mongodb.internal.operation.SyncOperationHelper.withSourceAndConnection(SyncOperationHelper.java:125)
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$executeRetryableRead$4(SyncOperationHelper.java:189)
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$decorateReadWithRetries$12(SyncOperationHelper.java:292)
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:67)
+	at com.mongodb.internal.operation.SyncOperationHelper.executeRetryableRead(SyncOperationHelper.java:194)
+	at com.mongodb.internal.operation.SyncOperationHelper.executeRetryableRead(SyncOperationHelper.java:176)
+	at com.mongodb.internal.operation.AggregateOperationImpl.execute(AggregateOperationImpl.java:193)
+	at com.mongodb.internal.operation.AggregateOperation.execute(AggregateOperation.java:153)
+	at com.mongodb.internal.operation.CountDocumentsOperation.execute(CountDocumentsOperation.java:134)
+	at com.mongodb.internal.operation.CountDocumentsOperation.execute(CountDocumentsOperation.java:41)
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:153)
+	at com.mongodb.client.internal.MongoCollectionImpl.executeCount(MongoCollectionImpl.java:227)
+	at com.mongodb.client.internal.MongoCollectionImpl.countDocuments(MongoCollectionImpl.java:197)
+	at org.springframework.data.mongodb.core.MongoTemplate.lambda$doExactCount$15(MongoTemplate.java:1226)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:601)
+	... 69 more
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   WitsApplicationTests.contextLoads » IllegalState Failed to load ApplicationContext for [WebMergedContextConfiguration@662b17b3 testClass = com.message.chat.WITS.WitsApplicationTests, locations = [], classes = [com.message.chat.WITS.WitsApplication], contextInitializerClasses = [], activeProfiles = ["test"], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6dd7b5a3, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7bf3a5d8, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@723e88f9, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@4bf48f6, org.springframework.boot.test.context.SpringBootTestAnnotation@5c62542b], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+[INFO] 
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  04:04 min
+[INFO] Finished at: 2026-03-07T22:06:39+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.1.2:test (default-test) on project WITS: 
+[ERROR] 
+[ERROR] Please refer to C:\Users\Administrator\Downloads\WITS\target\surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

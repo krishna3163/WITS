@@ -11,4 +11,4 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
   data:
     mongodb:
-      uri: mongodb://localhost:27017/wits_test_db
+      uri: mongodb+srv://postgres:3a0fc1ee2b2ae3c8fd01208171f75c20@3fi9ibjk.ap-southeast.database.insforge.app/insforge_test?retryWrites=true&w=majority

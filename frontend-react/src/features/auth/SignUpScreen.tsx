@@ -3,9 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import { Mail, Lock, User, Smartphone, ArrowRight, ArrowLeft, AlertCircle } from 'lucide-react';
 import { insforge } from '../../lib/insforge';
 import { useAuthStore } from '../../store/authStore';
+import { useToast } from '../../context/ToastContext';
 
 const SignUpScreen = () => {
     const navigate = useNavigate();
+    const { addToast } = useToast();
     const [step, setStep] = useState(1);
     const { checkSession } = useAuthStore();
 
@@ -47,7 +49,7 @@ const SignUpScreen = () => {
 
             if (data?.requireEmailVerification) {
                 setLoading(false);
-                alert("Please check your email to verify your account!");
+                addToast('success', 'Please check your email to verify your account.');
                 navigate('/auth/login');
             } else if (data?.accessToken) {
                 // If verification is disabled, log them right in

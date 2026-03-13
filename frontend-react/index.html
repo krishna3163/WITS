@@ -4,7 +4,16 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>frontend-react</title>
+    <title>WITS Super-App</title>
+    <script>
+      /**
+       * Polyfill for 'global' variable which is expected by some libraries like SockJS.
+       * Modern build tools like Vite do not provide Node.js globals by default.
+       */
+      if (typeof global === 'undefined') {
+        window.global = window;
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

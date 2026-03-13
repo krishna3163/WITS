@@ -40,6 +40,7 @@ public class Post {
     private PostAuthorType authorType;
     private String authorId;
     private LocalDateTime timestamp;
+    private UUID groupId;
 
     @ElementCollection
     @Builder.Default
@@ -129,5 +130,12 @@ public class Post {
     public void setLikerIds(List<UUID> likerIds) {
         this.likerIds = likerIds;
     }
-}
 
+    public UUID getGroupId() {
+        return groupId;
+    }
+
+    public void setGroupId(UUID groupId) {
+        this.groupId = groupId;
+    }
+}

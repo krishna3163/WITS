@@ -22,10 +22,42 @@ public class MessageController {
     public ResponseEntity<Message> sendMessage(
             @RequestParam UUID conversationId,
             @RequestParam UUID senderId,
-            @RequestBody String content) {
+            @RequestBody String content,
+            @RequestParam(required = false) Message.MessageType type,
+            @RequestParam(required = false, defaultValue = "false") boolean isSnap,
+            @RequestParam(required = false) Integer expirySeconds) {
 
-        Message message = messageService.sendMessage(conversationId, senderId, content);
+        Message message = messageService.sendMessage(conversationId, senderId, content, type, isSnap, expirySeconds);
         return ResponseEntity.ok(message);
+    }
+
+    @PostMapping("/schedule")
+    public ResponseEntity<Message> scheduleMessage(
+            @RequestParam UUID conversationId,
+            @RequestParam UUID senderId,
+            @RequestBody String content,
+            @RequestParam java.time.LocalDateTime scheduledAt) {
+
+        Message message = messageService.sendScheduledMessage(conversationId, senderId, content, scheduledAt);
+        return ResponseEntity.ok(message);
+    }
+
+    @PostMapping("/{messageId}/read")
+    public ResponseEntity<Void> markAsRead(
+            @PathVariable UUID messageId,
+            @RequestParam String readerId) {
+
+        messageService.markMessageAsRead(messageId, readerId);
+        return ResponseEntity.ok().build();
+    }
+
+    @PostMapping("/{messageId}/screenshot")
+    public ResponseEntity<Void> reportScreenshot(
+            @PathVariable UUID messageId,
+            @RequestParam String reporterId) {
+
+        messageService.reportScreenshot(messageId, reporterId);
+        return ResponseEntity.ok().build();
     }
 
     @GetMapping("/{conversationId}")
