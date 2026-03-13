@@ -78,6 +78,8 @@ jobs:
         with:
           node-version: 22
       - name: Install & Build Electron
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npm install
           npx cap sync electron
