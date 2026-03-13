@@ -1,0 +1,32 @@
+{
+  "appId": "com.message.chat.wits",
+  "productName": "WITS",
+  "directories": {
+    "buildResources": "resources",
+    "output": "dist"
+  },
+  "files": [
+    "assets/**/*",
+    "build/**/*",
+    "capacitor.config.*",
+    "app/**/*",
+    "index.html",
+    "main.js"
+  ],
+  "win": {
+    "target": ["nsis", "portable"],
+    "icon": "assets/appIcon.ico"
+  },
+  "linux": {
+    "target": ["AppImage", "deb"],
+    "category": "Communication"
+  },
+  "mac": {
+    "category": "public.app-category.social-networking",
+    "target": ["dmg", "zip"]
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true
+  }
+}

@@ -1,0 +1,120 @@
+name: Multi-Platform Build Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-frontend:
+    name: Build Frontend (React)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Install & Build
+        run: |
+          cd frontend-react
+          npm install
+          npm run build
+      - name: Upload Frontend Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-dist
+          path: frontend-react/dist
+
+  build-android:
+    name: Build Android (APK)
+    needs: build-frontend
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download Frontend Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: frontend-dist
+          path: frontend-react/dist
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Install Capacitor & Sync
+        run: |
+          npm install
+          npx cap sync android
+      - name: Build APK
+        run: |
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleDebug
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: WITS-Android-Debug
+          path: android/app/build/outputs/apk/debug/app-debug.apk
+
+  build-desktop:
+    name: Build Desktop (Win, Linux, Mac)
+    needs: build-frontend
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download Frontend Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: frontend-dist
+          path: frontend-react/dist
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Install & Build Electron
+        run: |
+          npm install
+          npx cap sync electron
+          cd electron
+          npm install
+          npm run electron:make
+      - name: Upload Desktop Binaries
+        uses: actions/upload-artifact@v4
+        with:
+          name: WITS-Desktop-${{ matrix.os }}
+          path: electron/dist/*
+
+  build-ios:
+    name: Build iOS (IPA)
+    needs: build-frontend
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download Frontend Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: frontend-dist
+          path: frontend-react/dist
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Install & Sync iOS
+        run: |
+          npm install
+          npx cap sync ios
+      - name: Build iOS
+        run: |
+          echo "iOS build requires code signing identities. Skipping actual archive build and providing .app instead."
+          # In a real scenario, you'd use fastlane or xcodebuild with certs
+          xcodebuild -workspace ios/App/App.xcworkspace -scheme App -configuration Debug -sdk iphoneos -derivedDataPath Build
+      - name: Upload iOS Build
+        uses: actions/upload-artifact@v4
+        with:
+          name: WITS-iOS-Debug
+          path: Build/Build/Products/Debug-iphoneos/App.app

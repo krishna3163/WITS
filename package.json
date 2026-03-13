@@ -3,8 +3,10 @@
   "license": "UNLICENSED",
   "type": "module",
   "dependencies": {
+    "@capacitor-community/electron": "^5.0.1",
     "@capacitor/android": "^8.2.0",
     "@capacitor/core": "^8.2.0",
+    "@capacitor/ios": "^8.2.0",
     "@polymer/polymer": "3.5.1",
     "@vaadin/a11y-base": "24.3.7",
     "@vaadin/accordion": "24.3.7",

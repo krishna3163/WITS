@@ -39,3 +39,9 @@ node_modules/
 android/app/build/
 android/.gradle/
 *.apk
+ios/App/Pods/
+ios/App/DerivedData/
+electron/dist/
+electron/build/
+dist/
+build/
