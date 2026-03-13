@@ -110,11 +110,11 @@ jobs:
           npx cap sync ios
       - name: Build iOS
         run: |
-          echo "iOS build requires code signing identities. Skipping actual archive build and providing .app instead."
-          # Build target using .xcodeproj since .xcworkspace might not be generated without CocoaPods
-          xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Debug -sdk iphoneos -derivedDataPath Build
+          echo "Building for iOS Simulator to bypass code signing requirements in CI."
+          # Build target using .xcodeproj for Simulator
+          xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Debug -sdk iphonesimulator -derivedDataPath Build CODE_SIGNING_ALLOWED=NO CODE_SIGN_IDENTITY=""
       - name: Upload iOS Build
         uses: actions/upload-artifact@v4
         with:
-          name: WITS-iOS-Debug
-          path: Build/Build/Products/Debug-iphoneos/App.app
+          name: WITS-iOS-Simulator
+          path: Build/Build/Products/Debug-iphonesimulator/App.app
