@@ -85,7 +85,7 @@ jobs:
           npx cap sync electron
           cd electron
           npm install
-          npm run electron:make
+          npm run build && npx electron-builder build -c ./electron-builder.config.json -p never
       - name: Upload Desktop Binaries
         uses: actions/upload-artifact@v4
         with:
