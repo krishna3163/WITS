@@ -7,8 +7,12 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build-frontend:
+    # ... (existing frontend job)
     name: Build Frontend (React)
     runs-on: ubuntu-latest
     steps:
@@ -90,7 +94,12 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: WITS-Desktop-${{ matrix.os }}
-          path: electron/dist/*
+          path: |
+            electron/dist/*.exe
+            electron/dist/*.dmg
+            electron/dist/*.AppImage
+            electron/dist/*.deb
+            electron/dist/*.zip
 
   build-ios:
     name: Build iOS (IPA)
@@ -113,10 +122,39 @@ jobs:
       - name: Build iOS
         run: |
           echo "Building for iOS Simulator to bypass code signing requirements in CI."
-          # Build target using .xcodeproj for Simulator
           xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Debug -sdk iphonesimulator -derivedDataPath Build CODE_SIGNING_ALLOWED=NO CODE_SIGN_IDENTITY=""
+          cd Build/Build/Products/Debug-iphonesimulator
+          zip -r WITS-iOS-Simulator.zip App.app
       - name: Upload iOS Build
         uses: actions/upload-artifact@v4
         with:
           name: WITS-iOS-Simulator
-          path: Build/Build/Products/Debug-iphonesimulator/App.app
+          path: Build/Build/Products/Debug-iphonesimulator/WITS-iOS-Simulator.zip
+
+  publish-release:
+    name: Publish Release
+    needs: [build-android, build-desktop, build-ios]
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+      - name: Download All Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: release-artifacts
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ github.run_number }}
+          name: Release v${{ github.run_number }}
+          draft: false
+          prerelease: false
+          files: |
+            release-artifacts/WITS-Android-Debug/*.apk
+            release-artifacts/WITS-Desktop-windows-latest/*.exe
+            release-artifacts/WITS-Desktop-macos-latest/*.dmg
+            release-artifacts/WITS-Desktop-macos-latest/*.zip
+            release-artifacts/WITS-Desktop-ubuntu-latest/*.AppImage
+            release-artifacts/WITS-Desktop-ubuntu-latest/*.deb
+            release-artifacts/WITS-iOS-Simulator/*.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
