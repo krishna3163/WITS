@@ -111,8 +111,8 @@ jobs:
       - name: Build iOS
         run: |
           echo "iOS build requires code signing identities. Skipping actual archive build and providing .app instead."
-          # In a real scenario, you'd use fastlane or xcodebuild with certs
-          xcodebuild -workspace ios/App/App.xcworkspace -scheme App -configuration Debug -sdk iphoneos -derivedDataPath Build
+          # Build target using .xcodeproj since .xcworkspace might not be generated without CocoaPods
+          xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Debug -sdk iphoneos -derivedDataPath Build
       - name: Upload iOS Build
         uses: actions/upload-artifact@v4
         with:
